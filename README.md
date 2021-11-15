@@ -36,8 +36,11 @@
 
 ### Git Branch convention
 - Git Flow 방식
+
 main : 최종적으로 배포되는 브랜치
+
 develop : feature 브랜치가 merge되는 개발의 중심 브랜치
+
 feature/{구현기능명} : develop 브랜치 아래에서 컴포넌트 기능 단위로 나누어 브랜치 만들기
 
 
