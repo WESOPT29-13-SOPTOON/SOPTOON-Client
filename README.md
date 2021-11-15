@@ -39,24 +39,23 @@ feature/{구현기능명} : develop 브랜치 아래에서 컴포넌트 기능 �
 
 
 ### Directory Structure
-세미나때 그대로
-
-   ⎡ 📁 Public
-   ⎜  ⎿ index.html
-   ⎣ 📁 src
-      ⎿ 📁 assets
-      ⎹  ⎿ 📁 fonts
-      ⎹  ⎿ 📁 icons
-      ⎹  ⎿ 📁 images
-      ⎿ 📁 components
-      ⎹  ⎿ 📁 common 
-      ⎿ 📁 libs
-      ⎹  ⎿ 📁 constant
-      ⎹  ⎮ ⎿ colors.js
-      ⎹  ⎿ api.js
-      ⎿ 📁 pages
-      ⎿ APP.js
-      ⎿ index.js
-
+```
+⎡ 📁 Public
+⎜  ⎿ index.html
+⎣ 📁 src
+   ⎿ 📁 assets
+   ⎹  ⎿ 📁 fonts
+   ⎹  ⎿ 📁 icons
+   ⎹  ⎿ 📁 images
+   ⎿ 📁 components
+   ⎹  ⎿ 📁 common 
+   ⎿ 📁 libs
+   ⎹  ⎿ 📁 constant
+   ⎹  ⎮ ⎿ colors.js
+   ⎹  ⎿ api.js
+   ⎿ 📁 pages
+   ⎿ APP.js
+   ⎿ index.js
+```
 
 
