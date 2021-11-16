@@ -24,3 +24,26 @@ const WebtoonThumbnail = () => {
 };
 
 export default WebtoonThumbnail;
+
+
+const StyledRoot = styled.div``;
+
+const StyledThumbnailImg = styled.img`
+  width: 29.6rem;
+  height: 16.4rem;
+`;
+
+const StyledTitle = styled.h2`
+  font-size: 3.3rem;
+`;
+
+const StyledIntro = styled.section`
+  font-size: 1.25rem;
+  & > strong {
+    font-weight: bold;
+  }
+`;
+
+const StyledBtn = styled.div`
+  display: flex;
+`;
