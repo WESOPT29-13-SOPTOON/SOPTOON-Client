@@ -11,7 +11,7 @@ const WebtoonThumbnail = () => {
       </StyledImgWrapper>
       <StyledIntro>
         <h2>조조코믹스</h2>
-        <strong>이동건</strong>
+        <h5>이동건</h5>
         <p>&lt;유미의 세포들&gt; 이동건 작가의 로맨스 시트콤 신작!</p>
         <p>오늘 할 일을 내일로 미루는 평범한 직장인 은조.</p>
         <p>그녀와는 다르게 외모와 매너 모든 것을 철저히 관리하는 직장동료 조완.</p>
@@ -37,10 +37,13 @@ const StyledRoot = styled.div`
   border-top: 0.1rem solid #e5e5e5;
   border-bottom: 0.1rem solid #e5e5e5;
   padding-top: 2.4rem;
-  padding-bottom: 2.4rem;
+  padding-bottom: 2.8rem;
+  display: flex;
+  flex-wrap: wrap;
 `;
 
 const StyledImgWrapper = styled.div`
+  margin-right: 2.2rem;
   & > img {
     width: 29.6rem;
     height: 16.4rem;
@@ -54,14 +57,23 @@ const StyledIntro = styled.section`
   & > h2 {
     font-size: 3.3rem;
     color: black;
+    margin-bottom: 0.8rem;
   }
 
-  & > strong {
+  & > h5 {
     font-weight: bold;
+    margin-bottom: 0.8rem;
+    line-height: 1.9rem;
+  }
+
+  & > p {
+    line-height: 1.9rem;
   }
 `;
 
 const StyledBtn = styled.div`
+  padding-top: 2.4rem;
+  float: right;
   & > button {
     background-color: #f9f9fc;
     color: #737373;
@@ -69,11 +81,17 @@ const StyledBtn = styled.div`
     width: 12.8rem;
     height: 5rem;
     border: none;
-    justify-content: baseline;
+    margin-right: 1.9rem;
   }
 
   & > button:nth-child(1) {
     background-color: #60d171;
     color: #ffffff;
+
+    & > img {
+      width: 1.6rem;
+      height: 1.6rem;
+      margin-right: 0.4rem;
+    }
   }
 `;
