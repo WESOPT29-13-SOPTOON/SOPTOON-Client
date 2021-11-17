@@ -1,13 +1,7 @@
-function App() {
-  return (
-    <div className="App">
-      <Button>hey</Button>
-    </div>
-  );
-}
+import MainRouter from "./routes/MainRouter";
 
-function Button(props) {
-  return <button>{props.children}</button>;
+function App() {
+  return <MainRouter />;
 }
 
 export default App;
