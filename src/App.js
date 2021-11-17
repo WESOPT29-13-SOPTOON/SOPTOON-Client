@@ -1,15 +1,7 @@
 import "./App.css";
 
 function App() {
-  return (
-    <div className="App">
-      <Button>hey</Button>
-    </div>
-  );
-}
-
-function Button(props) {
-  return <button>{props.children}</button>;
+  return <div className="App"></div>;
 }
 
 export default App;

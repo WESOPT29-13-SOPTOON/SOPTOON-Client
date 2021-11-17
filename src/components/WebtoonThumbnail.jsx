@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import plusBtn from "../assets/icons/plus-circle.svg";
 
 const WebtoonThumbnail = () => {
   return (
@@ -25,10 +24,9 @@ const WebtoonThumbnail = () => {
 
 export default WebtoonThumbnail;
 
-
 const StyledRoot = styled.div`
-  border-top: 0.1rem solid #E5E5E5;
-  border-bottom: 0.1rem solid #E5E5E5;
+  border-top: 0.1rem solid #e5e5e5;
+  border-bottom: 0.1rem solid #e5e5e5;
 `;
 
 const StyledThumbnailImg = styled.img`
@@ -51,16 +49,15 @@ const StyledIntro = styled.section`
 
 const StyledBtn = styled.div`
   & > button {
-  background-color: #F9F9FC;
-  color: #737373;
-  border-radius: 1.2rem;
-  width: 12.8rem;
-  height: 5rem;
+    background-color: #f9f9fc;
+    color: #737373;
+    border-radius: 1.2rem;
+    width: 12.8rem;
+    height: 5rem;
   }
 
   & > button::nth-child(1) {
-  background-color: #60D171;
-  color: #FFFFFF;
+    background-color: #60d171;
+    color: #ffffff;
   }
-
 `;
