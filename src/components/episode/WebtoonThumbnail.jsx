@@ -40,10 +40,12 @@ const StyledRoot = styled.div`
   padding-bottom: 2.8rem;
   display: flex;
   flex-wrap: wrap;
+  width: 89.6rem;
 `;
 
 const StyledImgWrapper = styled.div`
   margin-right: 2.2rem;
+
   & > img {
     width: 29.6rem;
     height: 16.4rem;
