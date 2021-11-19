@@ -30,7 +30,15 @@ const CommentsList = () => {
 
 export default CommentsList;
 
-const StyledRoot = styled.div``;
+const StyledRoot = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  & > * {
+    width: var(--screen-width);
+  }
+`;
 
 const StyledBtnWrapper = styled.div`
   font-size: 1.25rem;

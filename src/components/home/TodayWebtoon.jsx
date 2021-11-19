@@ -50,7 +50,11 @@ const TodayWebtoon = () => {
 
 export default TodayWebtoon;
 
-const StyledRoot = styled.div``;
+const StyledRoot = styled.div`
+  & > * {
+    width: var(--screen-width);
+  }
+`;
 
 const StyledTodayWebtoon = styled.div`
   & > div {
