@@ -14,16 +14,15 @@ const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;
     }
 
-    @media screen and (max-width: 90rem) {
-        :root {
-            --screen-width: 89.6rem;
-        }
+    :root {
+        --screen-width: 89.6rem;
     }
 
     @media screen and (max-width: 76.8rem) {
         :root {
             --screen-width: 53.226rem;
         }
+        
     }
 
     @media screen and (max-width: 36rem) {
