@@ -5,24 +5,24 @@ import PopularityGenreCartoonBase from "./PopularityGenreCartoonBase";
 const genre = ["순정", "소년", "무협"];
 const cartoonInfo = [
   {
-    img: "../../assets/images/img_challenge_episode1@3x.png",
-    title: "오늘의 후기",
-    author: "chaenn417417",
-    content: "매일 살아가는 후기",
-    starRating: "9.79",
+    img: "../../assets/images/img_paperback1@3x.png",
+    title: "터치터치 그대",
+    author: "손팡",
+    content: "네이버 웹소설 화제의 인기작 <터치터치 그...",
+    starRating: "9.8",
   },
   {
-    img: "../../assets/images/img_challenge_episode1@3x.png",
-    title: "오늘의 후기",
-    author: "chaenn417417",
-    content: "매일 살아가는 후기",
-    starRating: "9.79",
+    img: "../../assets/images/img_paperback1@3x.png",
+    title: "터치터치 그대",
+    author: "손팡",
+    content: "네이버 웹소설 화제의 인기작 <터치터치 그...",
+    starRating: "9.8",
   },
 ];
 
 const PopularityGenreCartoonBox = () => {
   return (
-    <StyledBox>
+    <StyledRoot>
       <h2>
         장르별 <span>인기 단행본 만화</span>
       </h2>
@@ -31,14 +31,15 @@ const PopularityGenreCartoonBox = () => {
           <PopularityGenreCartoonBase key={idx} genreName={name} data={cartoonInfo} />
         ))}
       </div>
-    </StyledBox>
+    </StyledRoot>
   );
 };
 
-const StyledBox = styled.section`
+const StyledRoot = styled.section`
   width: var(--screen-width);
   margin-bottom: 6.5rem;
   & > h2 {
+    margin-left: 2rem;
     font-size: 2.2rem;
     font-weight: 600;
     color: #000000;

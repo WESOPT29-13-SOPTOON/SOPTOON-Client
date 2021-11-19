@@ -1,23 +1,25 @@
 import React from "react";
 import styled from "styled-components";
-import BaseInfo from "./BaseInfo";
+import BaseInfoWrapper from "./BaseInfoWrapper";
+import WebtoonInfo from "./WebtoonInfo";
 import ChallengeWebtoonGroupHeader from "./ChallengeWebtoonGroupHeader";
 
 const ChallengeWebtoonBase = ({ groupName, data }) => {
   return (
-    <StyledBase>
+    <StyledRoot>
       <ChallengeWebtoonGroupHeader groupName={groupName} />
       <StyledBaseInfos>
         {data.map((data, idx) => (
-          <BaseInfo key={idx} data={data} type={"challengeVersion"} />
+          <BaseInfoWrapper key={idx} data={data}>
+            <WebtoonInfo data={data} />
+          </BaseInfoWrapper>
         ))}
       </StyledBaseInfos>
-    </StyledBase>
+    </StyledRoot>
   );
 };
 
-const StyledBase = styled.div`
-  /* position: relative; */
+const StyledRoot = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -31,9 +33,11 @@ const StyledBase = styled.div`
 const StyledBaseInfos = styled.div`
   display: flex;
   & > * {
+    display: flex;
+    align-items: center;
     margin-top: 2rem;
     margin-right: 1.4rem;
-    & > img {
+    img {
       width: 7.6rem;
       height: 7.6rem;
     }

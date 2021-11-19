@@ -3,14 +3,14 @@ import styled from "styled-components";
 
 const ChallengeWebtoonGroupHeader = ({ groupName }) => {
   return (
-    <StyledLine>
+    <StyledRoot>
       <span>{groupName}</span>
       <Line />
-    </StyledLine>
+    </StyledRoot>
   );
 };
 
-const StyledLine = styled.div`
+const StyledRoot = styled.div`
   display: flex;
   align-items: center;
   & > span {

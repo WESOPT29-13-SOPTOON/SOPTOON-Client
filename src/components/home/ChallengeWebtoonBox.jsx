@@ -5,28 +5,28 @@ import ChallengeWebtoonBase from "./ChallengeWebtoonBase";
 const group = ["에피소드", "옴니버스", "스토리"];
 const webtoonInfo = [
   {
-    img: "../../assets/images/img_challenge_episode1@3x.png",
+    img: "../../assets/images/img_paperback1@3x.png",
     title: "오늘의 후기",
     author: "chaenn417417",
     content: "매일 살아가는 후기",
     starRating: "9.79",
   },
   {
-    img: "../../assets/images/img_challenge_episode1@3x.png",
+    img: "../../assets/images/img_paperback1@3x.png",
     title: "오늘의 후기",
     author: "chaenn417417",
     content: "매일 살아가는 후기",
     starRating: "9.79",
   },
   {
-    img: "../../assets/images/img_challenge_episode1@3x.png",
+    img: "../../assets/images/img_paperback1@3x.png",
     title: "오늘의 후기",
     author: "chaenn417417",
     content: "매일 살아가는 후기",
     starRating: "9.79",
   },
   {
-    img: "../../assets/images/img_challenge_episode1@3x.png",
+    img: "../../assets/images/img_paperback1@3x.png",
     title: "오늘의 후기",
     author: "chaenn417417",
     content: "매일 살아가는 후기",
@@ -36,7 +36,7 @@ const webtoonInfo = [
 
 const ChallengeWebtoonBox = () => {
   return (
-    <StyledBox>
+    <StyledRoot>
       <h2>
         베스트도전 & 도전 <span>추천웹툰</span>
       </h2>
@@ -45,14 +45,15 @@ const ChallengeWebtoonBox = () => {
           <ChallengeWebtoonBase key={idx} groupName={name} data={webtoonInfo} />
         ))}
       </div>
-    </StyledBox>
+    </StyledRoot>
   );
 };
 
-const StyledBox = styled.section`
+const StyledRoot = styled.section`
   width: var(--screen-width);
   margin-bottom: 5.5rem;
   & > h2 {
+    margin-left: 2rem;
     font-size: 2.2rem;
     font-weight: 600;
     color: #000000;
