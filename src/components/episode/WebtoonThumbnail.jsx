@@ -37,7 +37,6 @@ export default WebtoonThumbnail;
 
 const StyledRoot = styled.div`
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
 
   & > * {
@@ -54,7 +53,7 @@ const StyledWrapper = styled.div`
 
 const StyledImgWrapper = styled.div`
   margin-right: 2.2rem;
-
+  float: left;
   & > img {
     width: 29.6rem;
     height: 16.4rem;
@@ -64,6 +63,7 @@ const StyledImgWrapper = styled.div`
 const StyledIntro = styled.section`
   font-size: 1.25rem;
   color: #737373;
+  float: left;
 
   & > h2 {
     font-size: 3.3rem;
@@ -85,6 +85,8 @@ const StyledIntro = styled.section`
 const StyledBtn = styled.div`
   padding-top: 2.4rem;
   float: right;
+  display: float;
+
   & > button {
     background-color: #f9f9fc;
     color: #737373;
@@ -93,6 +95,8 @@ const StyledBtn = styled.div`
     height: 5rem;
     border: none;
     margin-right: 1.9rem;
+    font-weight: bold;
+    vertical-align: middle;
   }
 
   & > button:nth-child(1) {
@@ -103,6 +107,7 @@ const StyledBtn = styled.div`
       width: 1.6rem;
       height: 1.6rem;
       margin-right: 0.4rem;
+      vertical-align: middle;
     }
   }
 `;

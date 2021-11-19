@@ -47,12 +47,15 @@ const StyledBtnWrapper = styled.div`
     border: none;
     background-color: white;
     margin-top: 3.8rem;
+    font-weight: bold;
   }
+
   & > button:nth-child(1) {
     color: #60d171;
     margin-right: 3.2rem;
     & > img {
       margin-right: 0.6rem;
+      vertical-align: middle;
     }
   }
   & > button:nth-child(2) {
@@ -67,13 +70,19 @@ const StyledBox = styled.div`
   margin-top: 1.7rem;
   margin-bottom: 2.4rem;
   color: #d2d2d2;
-  width: 66.4rem;
+
   height: 4rem;
   display: flex;
   justify-content: space-between;
 
   & > div:nth-child(1) {
-    line-height: 2rem;
+    display: flex;
+    align-items: center;
+
+    & > img {
+      margin-left: 1rem;
+      margin-right: 0.5rem;
+    }
 
     & > span {
       & > strong {
@@ -83,7 +92,8 @@ const StyledBox = styled.div`
   }
 
   & > div:nth-child(2) {
-    padding-top: 1.4rem;
+    display: flex;
+    align-items: center;
     margin-right: 1.8rem;
   }
 `;
