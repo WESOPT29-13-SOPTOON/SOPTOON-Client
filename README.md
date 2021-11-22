@@ -2,10 +2,8 @@
 
 ## 개발자
 |권소희|서혜은|김지윤|
-
 |-|-|-|
 |![소희언니 미모티콘](https://user-images.githubusercontent.com/44703262/142837052-c89f5824-1253-4283-8d62-fda4cb42ad9d.png)|![혜은이 미모티콘](https://user-images.githubusercontent.com/44703262/142837086-e16ad727-b775-4292-8f65-9e5a47a36bea.png)|![주먹 미모티콘](https://user-images.githubusercontent.com/44703262/142837174-d1ad511f-7d87-4248-bd77-e3ce496233bc.png)|
-
 |[@Sohee Kwon](https://github.com/sohee-K)|[@Hyeeun Seo](https://github.com/henization)|[@Jiyun Kim](https://github.com/small-j)|
 
 ## Tech
