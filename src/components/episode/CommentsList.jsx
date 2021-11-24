@@ -40,13 +40,16 @@ const StyledBtnWrapper = styled.div`
     background-color: white;
     margin-top: 3.8rem;
   }
+
   & > button:nth-child(1) {
     color: #60d171;
     margin-right: 3.2rem;
-    & > img {
+
+    img {
       margin-right: 0.6rem;
     }
   }
+
   & > button:nth-child(2) {
     color: #d2d2d2;
   }
@@ -67,8 +70,8 @@ const StyledBox = styled.div`
   & > div:nth-child(1) {
     line-height: 2rem;
 
-    & > span {
-      & > strong {
+    span {
+      strong {
         color: #60d171;
       }
     }
