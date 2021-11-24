@@ -3,8 +3,44 @@ import styled from "styled-components";
 import BestComment from "./BestComment";
 import cleanBot from "../../assets/images/img_cleanbot.png";
 import check from "../../assets/icons/ic_check.png";
+import bestIcon from "../../assets/icons/ic_bestcomment.png";
 
 const CommentsList = () => {
+  const commentsInfo = [
+    {
+      img: { bestIcon }, //객체는 :
+      name: "유진",
+      id: "haneugene",
+      date: "2021-10-18",
+      content:
+        "하루 종일 너란 바닷속을 항해하는 나는 아쿠아맨 헤엄 헤엄 헤엄\nI&apos;m rolling in the deep inside of you\n너의 어장은 너무 캄캄해",
+    },
+    {
+      img: { bestIcon }, //객체는 :
+      name: "유진",
+      id: "haneugene",
+      date: "2021-10-18",
+      content:
+        "하루 종일 너란 바닷속을 항해하는 나는 아쿠아맨 헤엄 헤엄 헤엄\nI&apos;m rolling in the deep inside of you\n너의 어장은 너무 캄캄해",
+    },
+    {
+      img: { bestIcon }, //객체는 :
+      name: "유진",
+      id: "haneugene",
+      date: "2021-10-18",
+      content:
+        "하루 종일 너란 바닷속을 항해하는 나는 아쿠아맨 헤엄 헤엄 헤엄\nI&apos;m rolling in the deep inside of you\n너의 어장은 너무 캄캄해",
+    },
+    {
+      img: { bestIcon }, //객체는 :
+      name: "유진",
+      id: "haneugene",
+      date: "2021-10-18",
+      content:
+        "하루 종일 너란 바닷속을 항해하는 나는 아쿠아맨 헤엄 헤엄 헤엄\nI&apos;m rolling in the deep inside of you\n너의 어장은 너무 캄캄해",
+    },
+  ];
+
   return (
     <StyledRoot>
       <StyledBtnWrapper>
@@ -23,7 +59,9 @@ const CommentsList = () => {
         </div>
         <div>설정</div>
       </StyledBox>
-      <BestComment />
+      {commentsInfo.map((commentInfo) => (
+        <BestComment key={commentInfo} />
+      ))}
     </StyledRoot>
   );
 };
@@ -33,11 +71,7 @@ export default CommentsList;
 const StyledRoot = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
-
-  & > * {
-    width: var(--screen-width);
-  }
+  padding-right: 19.8rem;
 `;
 
 const StyledBtnWrapper = styled.div`
@@ -70,7 +104,6 @@ const StyledBox = styled.div`
   margin-top: 1.7rem;
   margin-bottom: 2.4rem;
   color: #d2d2d2;
-
   height: 4rem;
   display: flex;
   justify-content: space-between;

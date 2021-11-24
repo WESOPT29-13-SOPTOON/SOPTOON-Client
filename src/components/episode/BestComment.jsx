@@ -1,26 +1,25 @@
 import React from "react";
 import styled from "styled-components";
-import bestIcon from "../../assets/icons/ic_bestcomment.png";
 
-const BestComment = () => {
+const BestComment = ({ commentInfo }) => {
+  const { img, name, id, date, content } = commentInfo; //구조 분해 할당
+
   return (
     <StyledRoot>
       <StyledHeader>
         <span>
-          <img src={bestIcon} alt="" />
-          유진(haneugene)
+          <img src={img} alt="" />
+          {name}({id})
         </span>
-        <span>2021-10-18</span>
+        <span>{date}</span>
       </StyledHeader>
-      <StyledContent>
-        <p>하루 종일 너란 바닷속을 항해하는 나는 아쿠아맨 헤엄 헤엄 헤엄</p>
-        <p>I&apos;m rolling in the deep inside of you</p>
-        <p>너의 어장은 너무 캄캄해</p>
-      </StyledContent>
+      <StyledContent>{content}</StyledContent>
       <StyledFooter>
-        답글
-        <button>좋아요 113</button>
-        <button>싫어요</button>
+        <div>답글</div>
+        <div>
+          <button>좋아요 113</button>
+          <button>싫어요</button>
+        </div>
       </StyledFooter>
     </StyledRoot>
   );
@@ -34,20 +33,24 @@ const StyledRoot = styled.div`
   padding-bottom: 2.4rem;
   padding-left: 2.1rem;
   padding-right: 2.4rem;
-  width: 69.8rem;
 `;
 
 const StyledHeader = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   & > span {
     font-size: 1.2rem;
     color: #737373;
+    display: flex;
+    align-items: center;
   }
+
   & > span:nth-child(1) {
     font-weight: bold;
     color: black;
+
     & > img {
       margin-right: 0.789rem;
     }
@@ -57,32 +60,41 @@ const StyledHeader = styled.div`
 const StyledContent = styled.section`
   margin-top: 2rem;
   margin-bottom: 0.8rem;
+  font-size: 1.25rem;
+  line-height: 1.9rem;
+  /* 
   & > p {
     font-size: 1.25rem;
     line-height: 1.9rem;
-  }
+  } */
 `;
 
 const StyledFooter = styled.div`
   color: #737373;
   font-size: 1.1rem;
-  & > button {
-    border-radius: 1.65rem;
-    border: 0.1rem solid #e5e5e5;
-    background-color: white;
-    margin-left: 1.6rem;
-    font-weight: bold;
-    color: #737373;
-    font-size: 1.1rem;
-  }
+  display: flex;
+  justify-content: space-between;
 
-  & > button:nth-child(1) {
-    width: 7.9em;
-    height: 3.1rem;
-  }
+  //답글 세로 중앙 정렬
 
-  & > button:nth-child(2) {
-    width: 5.6rem;
-    height: 3.1rem;
+  & > div:nth-child(2) {
+    & > button {
+      border-radius: 1.65rem;
+      border: 0.1rem solid #e5e5e5;
+      background-color: white;
+      margin-left: 1.6rem;
+      font-weight: bold;
+      color: #737373;
+      font-size: 1.1rem;
+      height: 3.1rem;
+    }
+    // 버튼 클릭했을 때 색 바뀌게
+    & > button:nth-child(1) {
+      height: 3.1rem;
+    }
+
+    & > button:nth-child(2) {
+      height: 3.1rem;
+    }
   }
 `;

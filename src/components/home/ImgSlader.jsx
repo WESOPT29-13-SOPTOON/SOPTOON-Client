@@ -24,9 +24,10 @@ const ImgSlader = () => {
 export default ImgSlader;
 
 const StyledRoot = styled.div`
-  border: 0.2rem solid #e5e5e5;
-  width: 69.169rem;
-  height: 33.2rem;
+  & > div {
+    color: #737373;
+    font-size: 1.13rem;
+  }
 
   & > img {
     width: 30.6rem;
