@@ -50,6 +50,7 @@ const StyledRoot = styled.div`
   & > div {
     color: #737373;
     font-size: 1.13rem;
+    letter-spacing: 0.1rem;
   }
 `;
 

@@ -15,10 +15,11 @@ const TodayWebtoon = () => {
 export default TodayWebtoon;
 
 const StyledRoot = styled.div`
+  width: 100vw;
   display: flex;
   justify-content: center;
 
-  & > * {
+  /* & > * {
     width: var(--screen-width);
-  }
+  } */
 `;

@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import ImgSlader from "./ImgSlader";
+import ImgSlider from "./ImgSlider";
 
 const TodayWebtoonSection = () => {
   return (
@@ -16,7 +16,7 @@ const TodayWebtoonSection = () => {
           <button>별점순</button>
         </StyledNav>
       </StyledTodayWebtoon>
-      <ImgSlader />
+      <ImgSlider />
     </StyledRoot>
   );
 };
@@ -68,7 +68,7 @@ const StyledNav = styled.div`
     margin-top: 6.2rem;
   }
 
-  & > button:nth-child(2) {
+  & > button:hover {
     color: white;
     background-color: #60d171;
   }
