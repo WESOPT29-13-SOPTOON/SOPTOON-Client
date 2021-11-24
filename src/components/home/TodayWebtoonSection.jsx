@@ -35,7 +35,6 @@ const StyledTodayWebtoon = styled.div`
   flex-direction: column;
   margin: 2.4rem 1.03rem 8.36rem 2.88rem;
   align-items: center;
-  /* margin: 0 auto; */
 
   & > div:nth-child(1) {
     font-size: 2.8rem;

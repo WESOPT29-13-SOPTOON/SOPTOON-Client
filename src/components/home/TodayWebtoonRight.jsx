@@ -59,8 +59,6 @@ const StyledNewComic = styled.div`
     & > strong {
       color: #60d171;
     }
-    & > p {
-    }
   }
 
   & > img {
@@ -94,12 +92,19 @@ const StyledBtn = styled.div`
     border-radius: 0.6rem;
     font-size: 1.4rem;
     flex-direction: row;
+    letter-spacing: -0.2rem;
+    font-weight: bold;
+
+    & > img {
+      margin-left: 1rem;
+    }
   }
 
   & > button:nth-child(1) {
     color: white;
     background-color: #60d171;
     border: none;
+    font-weight: normal;
   }
 
   & > button:nth-child(2) {
