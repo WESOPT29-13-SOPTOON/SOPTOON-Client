@@ -41,14 +41,16 @@ const StyledHeader = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   & > span {
     font-size: 1.2rem;
     color: #737373;
   }
+
   & > span:nth-child(1) {
     font-weight: bold;
     color: black;
-    & > img {
+    img {
       margin-right: 0.789rem;
     }
   }
@@ -57,6 +59,7 @@ const StyledHeader = styled.div`
 const StyledContent = styled.section`
   margin-top: 2rem;
   margin-bottom: 0.8rem;
+
   & > p {
     font-size: 1.25rem;
     line-height: 1.9rem;
@@ -66,6 +69,7 @@ const StyledContent = styled.section`
 const StyledFooter = styled.div`
   color: #737373;
   font-size: 1.1rem;
+
   & > button {
     border-radius: 1.65rem;
     border: 0.1rem solid #e5e5e5;

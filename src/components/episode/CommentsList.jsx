@@ -44,7 +44,6 @@ const StyledBtnWrapper = styled.div`
   & > button:nth-child(1) {
     color: #60d171;
     margin-right: 3.2rem;
-
     img {
       margin-right: 0.6rem;
     }
@@ -69,7 +68,6 @@ const StyledBox = styled.div`
 
   & > div:nth-child(1) {
     line-height: 2rem;
-
     span {
       strong {
         color: #60d171;
