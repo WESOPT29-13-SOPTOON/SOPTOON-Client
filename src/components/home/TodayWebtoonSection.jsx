@@ -41,8 +41,7 @@ const StyledTodayWebtoon = styled.div`
     font-weight: bold;
     width: 12.8rem;
     letter-spacing: -0.15rem;
-
-    & > strong {
+    strong {
       color: #60d171;
     }
   }
