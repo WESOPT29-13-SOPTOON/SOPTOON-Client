@@ -24,7 +24,7 @@ const CartoonInfo = ({ data }) => {
 const StyledRoot = styled.div`
   display: flex;
   flex-direction: column;
-  margin-left: 1rem;
+  margin-left: 0.89rem;
   & > h3 {
     font-size: 1.1rem;
     color: #000000;
@@ -39,12 +39,13 @@ const StyledRoot = styled.div`
     color: #737373;
     font-size: 1.1rem;
     margin-top: 1.171rem;
+    letter-spacing: -0.05rem;
   }
 `;
 
 const StyledStarRating = styled.div`
   display: flex;
-  align-items: center;
+  align-items: end;
   margin-top: 1.629rem;
 
   & > svg {

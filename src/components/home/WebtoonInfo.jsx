@@ -44,7 +44,7 @@ const StyledRoot = styled.div`
 
 const StyledStarRating = styled.div`
   display: flex;
-  align-items: center;
+  align-items: end;
   margin-top: 1.8rem;
   & > svg {
     width: 1.2rem;

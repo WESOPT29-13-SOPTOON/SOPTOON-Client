@@ -26,11 +26,11 @@ const PopularityGenreCartoonBox = () => {
       <h2>
         장르별 <span>인기 단행본 만화</span>
       </h2>
-      <div>
+      <StyledBaseWrapper>
         {genre.map((name, idx) => (
           <PopularityGenreCartoonBase key={idx} genreName={name} data={cartoonInfo} />
         ))}
-      </div>
+      </StyledBaseWrapper>
     </StyledRoot>
   );
 };
@@ -47,25 +47,26 @@ const StyledRoot = styled.section`
       color: #60d071;
     }
   }
+`;
 
-  & > div {
-    width: 100%;
-    height: 34.3rem;
-    background-color: #f9f9fc;
-    border: 0.1rem solid #e5e5e5;
-    border-radius: 1.6rem;
-    margin-top: 1.9rem;
-    display: flex;
-    & > * {
-      margin-top: 3.949rem;
-    }
-    & > *:first-child {
-      margin-top: 2.7rem;
-      margin-left: 6.11rem;
-    }
-    & > *:last-child {
-      margin-right: 6.6rem;
-    }
+const StyledBaseWrapper = styled.div`
+  width: 100%;
+  height: 34.3rem;
+  background-color: #f9f9fc;
+  border: 0.1rem solid #e5e5e5;
+  border-radius: 1.6rem;
+  margin-top: 1.9rem;
+  display: flex;
+  & > * {
+    margin-top: 3.949rem;
+    margin-right: 6.479rem;
+  }
+  & > *:first-child {
+    margin-top: 3.949rem;
+    margin-left: 6.11rem;
+  }
+  & > *:last-child {
+    margin-right: 6.6rem;
   }
 `;
 

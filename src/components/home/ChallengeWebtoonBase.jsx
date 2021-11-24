@@ -32,6 +32,7 @@ const StyledRoot = styled.div`
 
 const StyledBaseInfos = styled.div`
   display: flex;
+  margin-right: 3.8rem;
   & > * {
     display: flex;
     align-items: center;
@@ -44,6 +45,9 @@ const StyledBaseInfos = styled.div`
   }
   & > *:first-child {
     margin-left: 9.5rem;
+  }
+  & > *:last-child {
+    margin-right: 0;
   }
 `;
 

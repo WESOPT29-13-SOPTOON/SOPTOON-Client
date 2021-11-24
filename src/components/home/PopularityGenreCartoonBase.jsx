@@ -24,12 +24,9 @@ const PopularityGenreCartoonBase = ({ genreName, data }) => {
 
 const StyledRoot = styled.div`
   display: flex;
-  justify-content: center;
   flex-direction: column;
 
   & > * {
-    margin-right: 2.7rem;
-    margin-left: 3.6rem;
     font-size: 1.2rem;
   }
 `;
@@ -52,12 +49,15 @@ const StyledBaseInfos = styled.div`
   & > * {
     display: flex;
     align-items: center;
-    margin-top: 2rem;
+    margin-top: 2.54rem;
 
     img {
       width: 8.1rem;
       height: 9.9rem;
     }
+  }
+  & > *:first-child {
+    margin-top: 1.922rem;
   }
 `;
 
