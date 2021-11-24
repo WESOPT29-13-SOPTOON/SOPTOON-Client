@@ -59,8 +59,7 @@ const StyledBtn = styled.div`
   & > button:nth-child(1) {
     background-color: #60d171;
     color: #ffffff;
-
-    & > img {
+    img {
       width: 1.6rem;
       height: 1.6rem;
       margin-right: 0.4rem;
