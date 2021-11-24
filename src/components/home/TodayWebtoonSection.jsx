@@ -4,7 +4,7 @@ import ImgSlader from "./ImgSlader";
 
 const TodayWebtoonSection = () => {
   return (
-    <div>
+    <StyledRoot>
       <StyledTodayWebtoon>
         <div>
           오늘의 <strong>웹툰</strong>
@@ -15,24 +15,33 @@ const TodayWebtoonSection = () => {
           <button>조회순</button>
           <button>별점순</button>
         </StyledNav>
-        <ImgSlader />
       </StyledTodayWebtoon>
-    </div>
+      <ImgSlader />
+    </StyledRoot>
   );
 };
 
 export default TodayWebtoonSection;
 
-const StyledTodayWebtoon = styled.div`
+const StyledRoot = styled.div`
   border: 0.2rem solid #e5e5e5;
   width: 69.169rem;
   height: 33.2rem;
+  display: flex;
+`;
+
+const StyledTodayWebtoon = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin: 2.4rem 1.03rem 8.36rem 2.88rem;
+  align-items: center;
+  /* margin: 0 auto; */
 
   & > div:nth-child(1) {
     font-size: 2.8rem;
     font-weight: bold;
-    /* width: 12.8rem;
-    margin: 0 auto; */
+    width: 12.8rem;
+    letter-spacing: -0.15rem;
 
     & > strong {
       color: #60d171;
@@ -41,14 +50,23 @@ const StyledTodayWebtoon = styled.div`
 `;
 
 const StyledNav = styled.div`
-  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+
   & > button {
     border-radius: 1.35rem;
-    width: 6.111rem;
-    height: 2.037rem;
+    width: 6.11rem;
+    height: 2.04rem;
     border: none;
     background-color: #e8e8e8;
-    margin-bottom: 1.663rem;
+    margin-bottom: 1.6rem;
+    font-weight: bold;
+    font-size: 1rem;
+    letter-spacing: -0.1rem;
+  }
+
+  & > button:nth-child(1) {
+    margin-top: 6.2rem;
   }
 
   & > button:nth-child(2) {
