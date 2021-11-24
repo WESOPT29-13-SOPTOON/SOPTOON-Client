@@ -56,7 +56,7 @@ const StyledNewComic = styled.div`
     font-weight: bold;
     font-size: 1.5rem;
     margin-bottom: 0.985rem;
-    & > strong {
+    strong {
       color: #60d171;
     }
   }
@@ -68,12 +68,13 @@ const StyledNewComic = styled.div`
 
   & > div:nth-child(3) {
     font-weight: bold;
-    & > p:nth-child(1) {
+    p:nth-child(1) {
       font-size: 1.4rem;
       margin-top: 1.115rem;
       margin-bottom: 0.6rem;
     }
-    & > p:nth-child(2) {
+
+    p:nth-child(2) {
       font-size: 1rem;
       color: #737373;
     }
@@ -94,8 +95,7 @@ const StyledBtn = styled.div`
     flex-direction: row;
     letter-spacing: -0.2rem;
     font-weight: bold;
-
-    & > img {
+    img {
       margin-left: 1rem;
     }
   }

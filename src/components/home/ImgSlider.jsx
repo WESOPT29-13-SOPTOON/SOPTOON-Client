@@ -23,7 +23,6 @@ const ImgSlader = () => {
           <img src={viewBtn} />
         </button>
       </StyledSlader>
-      {/*이미지 및 동그란 버튼*/}
       <StyledBtn>
         <button>
           <img src={circleBtn} />
@@ -65,9 +64,6 @@ const StyledSlader = styled.div`
     width: 1.05rem;
     height: 0.62rem;
     margin-top: 8rem;
-
-    & > img {
-    }
   }
 
   & > button:nth-child(1) {
@@ -96,7 +92,7 @@ const StyledBtn = styled.div`
   & > button:nth-child(2) {
     margin-left: 0.2rem;
     margin-right: 0.2rem;
-    & > img {
+    img {
       filter: opacity(0.5) drop-shadow(0 0 0 #60d171);
     }
   }
