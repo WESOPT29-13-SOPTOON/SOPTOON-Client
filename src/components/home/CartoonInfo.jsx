@@ -34,6 +34,7 @@ const StyledRoot = styled.div`
     font-size: 1.1rem;
     color: #737373;
     margin-top: 0.3rem;
+    letter-spacing: -0.02em;
   }
   & > p {
     color: #737373;
