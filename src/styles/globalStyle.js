@@ -20,7 +20,7 @@ const GlobalStyle = createGlobalStyle`
 
     @media screen and (max-width: 76.8rem) {
         :root {
-            --screen-width: 53.226rem;
+            --screen-width: 70.4rem;
         }
         
     }
