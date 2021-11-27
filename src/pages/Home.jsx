@@ -1,18 +1,12 @@
 import React from "react";
-import styled from "styled-components";
 import Footer from "../components/common/Footer";
 
 const Home = () => {
   return (
-    <StyledHome>
+    <div>
       <Footer />
-    </StyledHome>
+    </div>
   );
 };
-
-const StyledHome = styled.main`
-  display: flex;
-  justify-content: center;
-`;
 
 export default Home;
