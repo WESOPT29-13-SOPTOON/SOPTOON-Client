@@ -1,20 +1,21 @@
 import React from "react";
 import styled, { css } from "styled-components";
 
-const TabItem = ({ value, isSelected, fontSize, color, onClick }) => {
+const TabItem = ({ value, isSelected, color, onClick }) => {
   return (
     <div>
       <StyledBack isSelected={isSelected}></StyledBack>
-      <StyledItemBtn isSelected={isSelected} fontSize={fontSize} color={color} onClick={onClick}>
+      <StyledItemBtn isSelected={isSelected} color={color} onClick={onClick}>
         {value}
       </StyledItemBtn>
     </div>
   );
 };
 
-const StyledItemBtn = styled.div`
+const StyledItemBtn = styled.button`
   position: relative;
   border: 0;
+  padding: 0;
   ${({ isSelected, color }) =>
     isSelected &&
     css`

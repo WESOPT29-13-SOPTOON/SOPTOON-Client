@@ -10,39 +10,58 @@ const WeeklyTab = () => {
     setSelectedDay(idx);
   };
   return (
-    <StyledWeeklyTab>
-      <div>
+    <StyledRoot>
+      <StyledWeeklyTab>
         {week.map((day, idx) => (
           <TabItem
             key={idx}
             value={day}
             isSelected={selectedDay === idx}
-            fontSize={"1.25rem"}
             color={"#60d171"}
             onClick={() => handleClick(idx)}
           />
         ))}
-      </div>
-    </StyledWeeklyTab>
+      </StyledWeeklyTab>
+    </StyledRoot>
+    //<StyledRoot>
+    //  <TabItem value={"요일전체"}
+    //   isSelected={true}
+    //   color={"#60d171"}
+    //   onClick={() => handleClick(idx)}
+    // />
+    //  {week.filter((tab, idx) => selectedDay === idx).map((day, idx) => (
+    //  <TabItem
+    //   key={idx}
+    //   value={day}
+    //   isSelected={true}
+    //   color={"#60d171"}
+    //   onClick={() => handleClick(idx)}
+    // />
+    //))}
+    //</StyledRoot>
   );
 };
 
-const StyledWeeklyTab = styled.section`
+const StyledRoot = styled.section`
   padding: 1.6rem 0;
-  & > div {
+`;
+
+const StyledWeeklyTab = styled.div`
+  background-color: #f9f9fc;
+  border-radius: 1.6rem;
+  width: 64.5rem;
+  height: 5rem;
+  /* width: 17.6rem; 모바일 반응형 */
+  padding: 1.7rem 2.4rem 1.8rem 2.4rem;
+  display: flex;
+  align-items: center;
+  & * {
     background-color: #f9f9fc;
-    border-radius: 1.6rem;
-    height: 5rem;
-    padding: 1.7rem 2.4rem 1.8rem 2.4rem;
-    display: flex;
-    align-items: center;
-    & * {
-      background-color: #f9f9fc;
-      margin-right: 3.5rem;
-      font-size: 1.25rem;
-      &:last-child {
-        margin-right: 0;
-      }
+    margin-right: 3.5rem;
+    font-size: 1.25rem;
+    letter-spacing: -0.15em;
+    &:last-child {
+      margin-right: 0;
     }
   }
 `;
