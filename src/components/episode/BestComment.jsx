@@ -1,14 +1,16 @@
 import React from "react";
 import styled from "styled-components";
+import bestIcon from "../../assets/icons/ic_bestcomment.png";
 
-const BestComment = ({ commentInfo }) => {
-  const { img, name, id, date, content } = commentInfo; //구조 분해 할당
+const BestComment = ({ comment }) => {
+  const { name, id, date, content } = comment;
+  //구조 분해 할당
 
   return (
     <StyledRoot>
       <StyledHeader>
         <span>
-          <img src={img} alt="" />
+          <img src={bestIcon} alt="bestIcon" />
           {name}({id})
         </span>
         <span>{date}</span>
@@ -40,14 +42,14 @@ const StyledHeader = styled.div`
   justify-content: space-between;
   align-items: center;
 
-  & > span {
+  span {
     font-size: 1.2rem;
     color: #737373;
     display: flex;
     align-items: center;
   }
 
-  & > span:nth-child(1) {
+  span:nth-child(1) {
     font-weight: bold;
     color: black;
 
@@ -77,7 +79,7 @@ const StyledFooter = styled.div`
 
   //답글 세로 중앙 정렬
 
-  & > div:nth-child(2) {
+  div:nth-child(2) {
     & > button {
       border-radius: 1.65rem;
       border: 0.1rem solid #e5e5e5;

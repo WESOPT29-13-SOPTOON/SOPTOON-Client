@@ -8,7 +8,7 @@ import bestIcon from "../../assets/icons/ic_bestcomment.png";
 const CommentsList = () => {
   const commentsInfo = [
     {
-      img: { bestIcon }, //객체는 :
+      img: { bestIcon },
       name: "유진",
       id: "haneugene",
       date: "2021-10-18",
@@ -16,7 +16,7 @@ const CommentsList = () => {
         "하루 종일 너란 바닷속을 항해하는 나는 아쿠아맨 헤엄 헤엄 헤엄\nI&apos;m rolling in the deep inside of you\n너의 어장은 너무 캄캄해",
     },
     {
-      img: { bestIcon }, //객체는 :
+      img: { bestIcon },
       name: "유진",
       id: "haneugene",
       date: "2021-10-18",
@@ -24,7 +24,7 @@ const CommentsList = () => {
         "하루 종일 너란 바닷속을 항해하는 나는 아쿠아맨 헤엄 헤엄 헤엄\nI&apos;m rolling in the deep inside of you\n너의 어장은 너무 캄캄해",
     },
     {
-      img: { bestIcon }, //객체는 :
+      img: { bestIcon },
       name: "유진",
       id: "haneugene",
       date: "2021-10-18",
@@ -32,7 +32,7 @@ const CommentsList = () => {
         "하루 종일 너란 바닷속을 항해하는 나는 아쿠아맨 헤엄 헤엄 헤엄\nI&apos;m rolling in the deep inside of you\n너의 어장은 너무 캄캄해",
     },
     {
-      img: { bestIcon }, //객체는 :
+      img: { bestIcon },
       name: "유진",
       id: "haneugene",
       date: "2021-10-18",
@@ -60,7 +60,7 @@ const CommentsList = () => {
         <div>설정</div>
       </StyledBox>
       {commentsInfo.map((commentInfo) => (
-        <BestComment key={commentInfo} />
+        <BestComment key={commentInfo} comment={commentInfo} />
       ))}
     </StyledRoot>
   );
@@ -77,14 +77,14 @@ const StyledRoot = styled.div`
 const StyledBtnWrapper = styled.div`
   font-size: 1.25rem;
 
-  & > button {
+  button {
     border: none;
     background-color: white;
     margin-top: 3.8rem;
     font-weight: bold;
   }
 
-  & > button:nth-child(1) {
+  button:nth-child(1) {
     color: #60d171;
     margin-right: 3.2rem;
     & > img {
@@ -92,7 +92,8 @@ const StyledBtnWrapper = styled.div`
       vertical-align: middle;
     }
   }
-  & > button:nth-child(2) {
+
+  button:nth-child(2) {
     color: #d2d2d2;
   }
 `;
@@ -108,7 +109,7 @@ const StyledBox = styled.div`
   display: flex;
   justify-content: space-between;
 
-  & > div:nth-child(1) {
+  div:nth-child(1) {
     display: flex;
     align-items: center;
 
@@ -118,13 +119,13 @@ const StyledBox = styled.div`
     }
 
     & > span {
-      & > strong {
+      strong {
         color: #60d171;
       }
     }
   }
 
-  & > div:nth-child(2) {
+  div:nth-child(2) {
     display: flex;
     align-items: center;
     margin-right: 1.8rem;
