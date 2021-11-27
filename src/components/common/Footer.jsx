@@ -24,6 +24,7 @@ const initRightFooterData = () => {
 const Footer = () => {
   return (
     <StyledFooter>
+      <Line />
       <div>
         <FooterBase list={initLeftFooterData()} />
         <span></span>
@@ -40,10 +41,12 @@ const Footer = () => {
 const StyledFooter = styled.footer`
   display: flex;
   flex-direction: column;
-  width: 100%;
+  align-items: center;
   padding-top: 3.7rem;
   border-top: 0.1rem solid #d2d2d2;
-
+  & > * {
+    width: var(--screen-width);
+  }
   & > div {
     display: flex;
     & > span {
@@ -62,5 +65,7 @@ const StyledFooter = styled.footer`
     padding: 0 0.8rem;
   }
 `;
+
+const Line = styled.div``;
 
 export default Footer;
