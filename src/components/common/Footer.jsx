@@ -26,11 +26,11 @@ const Footer = () => {
     <StyledRoot>
       <Line />
       {/* <Screen desktop tablet> */}
-      <div>
+      <StyledBaseWrapper>
         <FooterBase list={initLeftFooterData()} />
         <span></span>
         <FooterBase list={initRightFooterData()} />
-      </div>
+      </StyledBaseWrapper>
       {/* </Screen> */}
       {/* <Screen mobile>
       <FooterBase list={initLeftFooterData()} />
@@ -55,17 +55,6 @@ const StyledRoot = styled.footer`
   & > * {
     width: var(--screen-width);
   }
-  & > div {
-    display: flex;
-    padding-top: 3.7rem;
-    span {
-      position: absolute;
-      left: 50%;
-      width: 0.1rem;
-      height: 3.5rem;
-      background-color: #d2d2d2;
-    }
-  }
 
   & > small {
     font-size: 1.1.rem;
@@ -73,6 +62,18 @@ const StyledRoot = styled.footer`
     margin-top: 3rem;
     margin-bottom: 7.5rem;
     padding: 0 0.8rem;
+  }
+`;
+
+const StyledBaseWrapper = styled.div`
+  display: flex;
+  padding-top: 3.7rem;
+  & > span {
+    position: absolute;
+    left: 50%;
+    width: 0.1rem;
+    height: 3.5rem;
+    background-color: #d2d2d2;
   }
 `;
 //span 태그
