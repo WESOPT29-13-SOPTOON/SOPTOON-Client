@@ -3,21 +3,28 @@ import styled, { css } from "styled-components";
 
 const FooterBase = ({ list }) => {
   return (
-    <StyledFooterBase>
+    <StyledRoot>
       {list.map((item, idx) => (
         <StyledList key={idx} isBold={item.isBold}>
           {item.content}
         </StyledList>
       ))}
-    </StyledFooterBase>
+    </StyledRoot>
   );
 };
 
-const StyledFooterBase = styled.ul`
+const StyledRoot = styled.ul`
   list-style: none;
   display: flex;
   flex-wrap: wrap;
+  &:first-child {
+    margin-right: 7rem;
+  }
 `;
+// @media ${({ theme }) => theme.device.mobile} {
+//   margin-right: 0;
+//   margin-top: 2rem;
+// }
 
 const StyledList = styled.li`
   height: 1rem;
