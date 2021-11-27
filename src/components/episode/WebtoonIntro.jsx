@@ -26,7 +26,8 @@ const StyledIntro = styled.section`
   & > h2 {
     font-size: 3.3rem;
     color: black;
-    margin-bottom: 0.8rem;
+    margin-bottom: 1.2rem;
+    font-weight: bold;
   }
 
   & > h5 {

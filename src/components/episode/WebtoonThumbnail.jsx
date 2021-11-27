@@ -37,7 +37,7 @@ const StyledRoot = styled.div`
 
 const StyledImgWrapper = styled.div`
   margin-right: 2.2rem;
-  & > img {
+  img {
     width: 29.6rem;
     height: 16.4rem;
   }
@@ -46,7 +46,7 @@ const StyledImgWrapper = styled.div`
 const StyledBtn = styled.div`
   padding-top: 2.4rem;
   float: right;
-  & > button {
+  button {
     background-color: #f9f9fc;
     color: #737373;
     border-radius: 1.2rem;
@@ -54,12 +54,13 @@ const StyledBtn = styled.div`
     height: 5rem;
     border: none;
     margin-right: 1.9rem;
+    letter-spacing: -0.2rem;
   }
 
-  & > button:nth-child(1) {
+  button:nth-child(1) {
     background-color: #60d171;
     color: #ffffff;
-    img {
+    & > img {
       width: 1.6rem;
       height: 1.6rem;
       margin-right: 0.4rem;
