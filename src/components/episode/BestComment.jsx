@@ -2,8 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import bestIcon from "../../assets/icons/ic_bestcomment.png";
 
-const BestComment = ({ comment }) => {
-  const { name, id, date, content } = comment;
+const BestComment = ({ bestComment }) => {
+  const { name, id, date, content } = bestComment;
   //구조 분해 할당
 
   return (
@@ -19,7 +19,7 @@ const BestComment = ({ comment }) => {
       <StyledFooter>
         <div>답글</div>
         <div>
-          <button>좋아요 113</button>
+          <button>좋아요 127</button>
           <button>싫어요</button>
         </div>
       </StyledFooter>
@@ -78,8 +78,6 @@ const StyledFooter = styled.div`
   justify-content: space-between;
   align-items: center;
 
-  //답글 세로 중앙 정렬
-
   div:nth-child(1) {
     &:hover {
       color: black;
@@ -98,13 +96,4 @@ const StyledFooter = styled.div`
       font-size: 1.1rem;
       height: 3.1rem;
     }
-    // 버튼 클릭했을 때 색 바뀌게
-    & > button:nth-child(1) {
-      height: 3.1rem;
-    }
-
-    & > button:nth-child(2) {
-      height: 3.1rem;
-    }
-  }
 `;
