@@ -76,8 +76,16 @@ const StyledFooter = styled.div`
   font-size: 1.1rem;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
   //답글 세로 중앙 정렬
+
+  div:nth-child(1) {
+    &:hover {
+      color: black;
+      cursor: pointer;
+    }
+  }
 
   div:nth-child(2) {
     & > button {
