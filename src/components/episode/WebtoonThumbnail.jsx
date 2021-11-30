@@ -57,6 +57,10 @@ const StyledBtn = styled.div`
     letter-spacing: -0.2rem;
   }
 
+  button:hover {
+    font-weight: bold;
+  }
+
   button:nth-child(1) {
     background-color: #60d171;
     color: #ffffff;
