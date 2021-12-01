@@ -1,6 +1,5 @@
 import React from "react";
 import { useState } from "react";
-import styled from "styled-components";
 import CommentsListHeader from "../components/episode/CommentsListHeader";
 import WebtoonThumbnail from "../components/episode/WebtoonThumbnail";
 import CommentsListMain from "../components/episode/CommentsListMain";
@@ -11,21 +10,10 @@ const Episode = () => {
   return (
     <div>
       <WebtoonThumbnail />
-      <Center>
-        <CommentsListHeader setView={setView} />
-        <CommentsListMain view={view} />
-      </Center>
+      <CommentsListHeader setView={setView} />
+      <CommentsListMain view={view} />
     </div>
   );
 };
 
 export default Episode;
-
-const Center = styled.div`
-  /* display: flex;
-  flex-direction: column;
-
-  & > * {
-    width: var(--screen-width);
-  } */
-`;
