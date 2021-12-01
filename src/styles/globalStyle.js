@@ -4,6 +4,8 @@ import reset from "styled-reset";
 const GlobalStyle = createGlobalStyle`
     ${reset}
     html, body, #root {
+        width: 100%;
+        height: 100%;
         padding: 0;
         margin: 0;
         font-size: 62.5%;
@@ -15,19 +17,19 @@ const GlobalStyle = createGlobalStyle`
     }
 
     :root {
-        --screen-width: 89.6rem;
+        --screen-width: 896px;
     }
 
-    @media screen and (max-width: 76.8rem) {
+    @media screen and (min-width: 704px) and (max-width: 895px) {
         :root {
-            --screen-width: 53.226rem;
+            --screen-width: 704px;
         }
         
     }
 
-    @media screen and (max-width: 36rem) {
+    @media screen and (max-width: 703px) {
         :root {
-            --screen-width: 31.192rem;
+            --screen-width: 312px;
         }
     }
 
