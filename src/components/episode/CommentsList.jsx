@@ -101,10 +101,10 @@ const CommentsList = () => {
 export default CommentsList;
 
 const StyledRoot = styled.div`
-  display: flex;
+  /* display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  width: 100vw;
+  width: 100vw; */
 `;
 
 const StyledWrapper = styled.div`
