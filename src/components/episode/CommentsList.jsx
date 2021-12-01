@@ -17,9 +17,9 @@ const CommentsList = ({ view, commentsData }) => {
 export default CommentsList;
 
 const StyledRoot = styled.div`
-  border-bottom: 0.1rem solid #e5e5e5;
+  /* border-bottom: 0.1rem solid #e5e5e5;
   margin-bottom: 2.4rem;
   padding-bottom: 2.4rem;
   padding-left: 2.1rem;
-  padding-right: 2.4rem;
+  padding-right: 2.4rem; */
 `;

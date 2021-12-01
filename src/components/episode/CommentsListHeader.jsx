@@ -38,8 +38,8 @@ const StyledRoot = styled.div`
 `;
 
 const StyledWrapper = styled.div`
-  flex-direction: column;
-  padding-right: 19.8rem;
+  /* flex-direction: column;
+  padding-right: 19.8rem; */
 `;
 
 const StyledBtnWrapper = styled.div`

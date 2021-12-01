@@ -84,7 +84,4 @@ const CommentsListMain = ({ view }) => {
 
 export default CommentsListMain;
 
-const StyledMain = styled.main`
-  flex-direction: column;
-  padding-right: 19.8rem;
-`;
+const StyledMain = styled.main``;
