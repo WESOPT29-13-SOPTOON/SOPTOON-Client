@@ -1,14 +1,14 @@
 //copyright by KimKwon
 import { useMediaQuery } from "react-responsive";
 
-const deviceQuery = {
-  mobile: "(max-width: 36rem)",
-  tablet: "(min-width: 36.1rem) and (max-width: 76.8rem)",
-  desktop: "(min-width: 76.9rem)",
+export const deviceQuery = {
+  mobile: "(max-width: 703px)",
+  tablet: "(min-width: 704px) and (max-width: 895px)",
+  desktop: "(min-width: 896px)",
 };
 
 function Screen({ children, mobile, tablet, desktop }) {
-  let renderFlag = true;
+  let renderFlag = false;
 
   const isMobile = useMediaQuery({
     query: deviceQuery.mobile,
@@ -22,9 +22,15 @@ function Screen({ children, mobile, tablet, desktop }) {
     query: deviceQuery.desktop,
   });
 
-  if (mobile) renderFlag = renderFlag && isMobile;
-  if (tablet) renderFlag = renderFlag && isTablet;
-  if (desktop) renderFlag = renderFlag && isDesktop;
+  if (mobile) {
+    renderFlag = renderFlag || isMobile;
+  }
+  if (tablet) {
+    renderFlag = renderFlag || isTablet;
+  }
+  if (desktop) {
+    renderFlag = renderFlag || isDesktop;
+  }
 
   return <>{renderFlag && children}</>;
 }
