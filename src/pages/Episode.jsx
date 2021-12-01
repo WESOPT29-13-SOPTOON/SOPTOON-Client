@@ -5,13 +5,22 @@ import styled from "styled-components";
 
 const Episode = () => {
   return (
-    <StyledRoot>
+    <div>
       <WebtoonThumbnail />
-      <CommentsList />
-    </StyledRoot>
+      <Center>
+        <CommentsList />
+      </Center>
+    </div>
   );
 };
 
 export default Episode;
 
-const StyledRoot = styled.div``;
+const Center = styled.div`
+  display: flex;
+  justify-content: center;
+
+  & > * {
+    width: var(--screen-width);
+  }
+`;
