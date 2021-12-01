@@ -1,8 +1,9 @@
 import React from "react";
-import CommentsList from "../components/episode/CommentsList";
-import WebtoonThumbnail from "../components/episode/WebtoonThumbnail";
-import styled from "styled-components";
 import { useState } from "react";
+import styled from "styled-components";
+import CommentsListHeader from "../components/episode/CommentsListHeader";
+import WebtoonThumbnail from "../components/episode/WebtoonThumbnail";
+import CommentsListMain from "../components/episode/CommentsListMain";
 
 const Episode = () => {
   const [view, setView] = useState("");
@@ -11,7 +12,8 @@ const Episode = () => {
     <div>
       <WebtoonThumbnail />
       <Center>
-        <CommentsList setView={setView} view={view} />
+        <CommentsListHeader setView={setView} />
+        <CommentsListMain view={view} />
       </Center>
     </div>
   );

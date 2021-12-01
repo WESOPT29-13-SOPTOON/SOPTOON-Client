@@ -1,13 +1,15 @@
 import React from "react";
 import styled from "styled-components";
+import bestIcon from "../../assets/icons/ic_bestcomment.png";
 
-const Comment = ({ comment }) => {
+const Comment = ({ comment, view }) => {
   const { name, id, date, content } = comment;
 
   return (
     <StyledRoot>
       <StyledHeader>
         <span>
+          <img src={bestIcon} alt="bestIcon" className={view} />
           {name}({id})
         </span>
         <span>{date}</span>
@@ -49,6 +51,10 @@ const StyledHeader = styled.div`
   span:nth-child(1) {
     font-weight: bold;
     color: black;
+
+    & > img.comment {
+      display: none;
+    }
   }
 `;
 
