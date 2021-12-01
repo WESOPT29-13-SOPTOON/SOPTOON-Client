@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import EpisodeSlider from "./EpisodeSlider";
+import Screen from "../../styles/Screen";
+import EpisodeSliderWrapper from "./EpisodeSliderWrapper";
 import ViewHeader from "./ViewHeader";
 import ViewMain from "./ViewMain";
 
@@ -9,7 +10,15 @@ const View = () => {
     <StyledRoot>
       <ViewHeader />
       <ViewMain />
-      <EpisodeSlider maxEpisodeImg={5} />
+      <Screen desktop>
+        <EpisodeSliderWrapper maxEpisodeImg={5} />
+      </Screen>
+      <Screen tablet>
+        <EpisodeSliderWrapper maxEpisodeImg={4} />
+      </Screen>
+      <Screen mobile>
+        <EpisodeSliderWrapper maxEpisodeImg={0} />
+      </Screen>
     </StyledRoot>
   );
 };
