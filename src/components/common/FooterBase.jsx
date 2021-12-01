@@ -21,10 +21,6 @@ const StyledRoot = styled.ul`
     margin-right: 7rem;
   }
 `;
-// @media ${({ theme }) => theme.device.mobile} {
-//   margin-right: 0;
-//   margin-top: 2.4rem;
-// }
 
 const StyledList = styled.li`
   height: 1rem;

@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { applyMediaQuery } from "../../styles/mediaQuery";
 import Screen from "../../styles/Screen";
 import FooterBase from "./FooterBase";
 
@@ -57,9 +58,27 @@ const StyledRoot = styled.footer`
   & > small {
     font-size: 1.1.rem;
     color: black;
-    margin-top: 3rem;
     margin-bottom: 7.5rem;
     padding: 0 0.8rem;
+    ${applyMediaQuery("desktop")} {
+      margin-top: 5.3rem;
+    }
+    ${applyMediaQuery("tablet")} {
+      margin-top: 3.2rem;
+    }
+    ${applyMediaQuery("mobile")} {
+      margin-top: 4.8rem;
+    }
+  }
+
+  & > *:first-child {
+    margin-bottom: 3.6rem;
+  }
+
+  ${applyMediaQuery("mobile")} {
+    & > *:nth-child(3) {
+      margin-top: 2.4rem;
+    }
   }
 `;
 // @media ${({ theme }) => theme.device.tablet || theme.device.mobile} {
@@ -72,7 +91,6 @@ const StyledRoot = styled.footer`
 
 const StyledBaseWrapper = styled.div`
   display: flex;
-  padding-top: 3.7rem;
   & > span {
     position: absolute;
     left: 50%;
