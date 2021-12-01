@@ -23,7 +23,7 @@ const StyledRoot = styled.ul`
 `;
 // @media ${({ theme }) => theme.device.mobile} {
 //   margin-right: 0;
-//   margin-top: 2rem;
+//   margin-top: 2.4rem;
 // }
 
 const StyledList = styled.li`
