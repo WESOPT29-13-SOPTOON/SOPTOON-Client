@@ -31,15 +31,17 @@ const CommentsListHeader = ({ setView }) => {
 export default CommentsListHeader;
 
 const StyledRoot = styled.div`
-  /* display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: 100vw; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  & > * {
+    width: var(--screen-width);
+  }
 `;
 
 const StyledWrapper = styled.div`
-  /* flex-direction: column;
-  padding-right: 19.8rem; */
+  padding-right: 19.8rem;
 `;
 
 const StyledBtnWrapper = styled.div`

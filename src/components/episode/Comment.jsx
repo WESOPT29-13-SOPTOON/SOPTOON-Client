@@ -90,4 +90,5 @@ const StyledFooter = styled.div`
       font-size: 1.1rem;
       height: 3.1rem;
     }
+  }
 `;

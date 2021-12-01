@@ -7,9 +7,11 @@ const CommentsList = ({ view, commentsData }) => {
 
   return (
     <StyledRoot>
-      {commentsData.map((comment, i) => (
-        <Comment view={view} comment={comment} key={`comment-${i}`} />
-      ))}
+      <StyledWrapper>
+        {commentsData.map((comment, i) => (
+          <Comment view={view} comment={comment} key={`comment-${i}`} />
+        ))}
+      </StyledWrapper>
     </StyledRoot>
   );
 };
@@ -17,9 +19,15 @@ const CommentsList = ({ view, commentsData }) => {
 export default CommentsList;
 
 const StyledRoot = styled.div`
-  /* border-bottom: 0.1rem solid #e5e5e5;
-  margin-bottom: 2.4rem;
-  padding-bottom: 2.4rem;
-  padding-left: 2.1rem;
-  padding-right: 2.4rem; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  & > * {
+    width: var(--screen-width);
+  }
+`;
+
+const StyledWrapper = styled.div`
+  padding-right: 19.8rem;
 `;

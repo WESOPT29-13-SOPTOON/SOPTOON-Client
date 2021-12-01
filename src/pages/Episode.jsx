@@ -22,10 +22,10 @@ const Episode = () => {
 export default Episode;
 
 const Center = styled.div`
-  display: flex;
+  /* display: flex;
   flex-direction: column;
 
   & > * {
     width: var(--screen-width);
-  }
+  } */
 `;
