@@ -5,6 +5,8 @@ import bestIcon from "../../assets/icons/ic_bestcomment.png";
 const Comment = ({ comment, view }) => {
   const { name, id, date, content } = comment;
 
+  // 좋아요 버튼 클릭했을 때 색변화
+  // 좋아요 버튼 클릭했을 때 숫자 올라가게
   return (
     <StyledRoot>
       <StyledHeader>
@@ -40,6 +42,7 @@ const StyledHeader = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 2.4rem;
 
   span {
     font-size: 1.2rem;
@@ -52,8 +55,13 @@ const StyledHeader = styled.div`
     font-weight: bold;
     color: black;
 
+    & > img {
+      padding-right: 0.78rem;
+    }
+
     & > img.comment {
       display: none;
+      padding-right: 0;
     }
   }
 `;
