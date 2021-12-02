@@ -1,25 +1,22 @@
 import React from "react";
 import styled from "styled-components";
 import thumbnail from "../../assets/images/img_jojocomics.png";
-import plusIcon from "../../assets/icons/plus-circle.svg";
 import WebtoonIntro from "./WebtoonIntro";
+import { applyMediaQuery } from "../../styles/mediaQuery";
+import WebtoonThumbnailBtn from "./WebtoonThumbnailBtn";
 
 const WebtoonThumbnail = () => {
   return (
     <StyledRoot>
-      <StyledImgWrapper>
-        <img src={thumbnail} alt="썸네일" />
-      </StyledImgWrapper>
-      <WebtoonIntro />
-      <StyledBtn>
-        <button>
-          <img src={plusIcon} />
-          관심웹툰
-        </button>
-        <button>첫화보기</button>
-        <button>목록보기</button>
-        <button>다른 작품</button>
-      </StyledBtn>
+      <StyledWrapper>
+        <StyledHeader>
+          <StyledImgWrapper>
+            <img src={thumbnail} alt="썸네일" />
+          </StyledImgWrapper>
+          <WebtoonIntro />
+        </StyledHeader>
+        <WebtoonThumbnailBtn />
+      </StyledWrapper>
     </StyledRoot>
   );
 };
@@ -27,12 +24,24 @@ const WebtoonThumbnail = () => {
 export default WebtoonThumbnail;
 
 const StyledRoot = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+const StyledWrapper = styled.div`
   border-top: 0.1rem solid #e5e5e5;
   border-bottom: 0.1rem solid #e5e5e5;
   padding-top: 2.4rem;
   padding-bottom: 2.8rem;
+  & > * {
+    width: var(--screen-width);
+  }
+`;
+
+const StyledHeader = styled.div`
   display: flex;
-  flex-wrap: wrap;
+  /* flex-direction: inline-; */
 `;
 
 const StyledImgWrapper = styled.div`
@@ -40,36 +49,9 @@ const StyledImgWrapper = styled.div`
   img {
     width: 29.6rem;
     height: 16.4rem;
-  }
-`;
-
-const StyledBtn = styled.div`
-  display: flex;
-  justify-content: flex-end;
-  padding-top: 2.4rem;
-
-  button {
-    background-color: #f9f9fc;
-    color: #737373;
-    border-radius: 1.2rem;
-    width: 12.8rem;
-    height: 5rem;
-    border: none;
-    margin-right: 1.9rem;
-    letter-spacing: -0.2rem;
-  }
-
-  button:hover {
-    font-weight: bold;
-  }
-
-  button:nth-child(1) {
-    background-color: #60d171;
-    color: #ffffff;
-    & > img {
-      width: 1.6rem;
-      height: 1.6rem;
-      margin-right: 0.4rem;
+    ${applyMediaQuery("mobile")} {
+      width: 10.4rem;
+      height: 5.8rem;
     }
   }
 `;
