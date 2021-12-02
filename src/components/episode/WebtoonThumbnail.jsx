@@ -44,8 +44,10 @@ const StyledImgWrapper = styled.div`
 `;
 
 const StyledBtn = styled.div`
+  display: flex;
+  justify-content: flex-end;
   padding-top: 2.4rem;
-  float: right;
+
   button {
     background-color: #f9f9fc;
     color: #737373;
