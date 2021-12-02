@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import newWebtoon from "../../assets/images/img_new.png";
 import uploadIcon from "../../assets/icons/ic_upload.png";
-import viewMoreIcon from "../../assets/icons/ic_viewmore.png";
+import viewMoreIcon from "../../assets/icons/ic_viewmore.svg";
 
 const TodayWebtoonRight = () => {
   return (

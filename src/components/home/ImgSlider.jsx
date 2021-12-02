@@ -3,10 +3,12 @@ import styled from "styled-components";
 import today1 from "../../assets/images/img_today1.png";
 import today2 from "../../assets/images/img_today2.png";
 import today3 from "../../assets/images/img_today3.png";
-import viewBtn from "../../assets/icons/ic_viewmore.png";
-import circleBtn from "../../assets/icons/ic_circle.png";
+import viewBtn from "../../assets/icons/ic_viewmore.svg";
+import circleBtn from "../../assets/icons/ic_circle.svg";
 
 const ImgSlader = () => {
+  // 화살표 눌렀을 때 이미지 움직이기
+  // 이미지 인덱스에 따라 동그라미에 초록색 색깔 뜨게하기
   return (
     <StyledRoot>
       <div>11월 10일 수요일</div>
@@ -58,7 +60,7 @@ const StyledSlader = styled.div`
   flex-direction: row;
   margin-top: 1.26rem;
 
-  & > button {
+  button {
     border: none;
     background-color: transparent;
     width: 1.05rem;
@@ -66,8 +68,11 @@ const StyledSlader = styled.div`
     margin-top: 8rem;
   }
 
-  & > button:nth-child(1) {
+  button:nth-child(1) {
     transform: scaleX(-1);
+  }
+
+  button:hover {
   }
 `;
 

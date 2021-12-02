@@ -6,8 +6,10 @@ import TodayWebtoonSection from "./TodayWebtoonSection";
 const TodayWebtoon = () => {
   return (
     <StyledRoot>
-      <TodayWebtoonSection />
-      <TodayWebtoonRight />
+      <StyledWrapper>
+        <TodayWebtoonSection />
+        <TodayWebtoonRight />
+      </StyledWrapper>
     </StyledRoot>
   );
 };
@@ -19,3 +21,5 @@ const StyledRoot = styled.div`
   display: flex;
   justify-content: center;
 `;
+
+const StyledWrapper = styled.div``;
