@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { applyMediaQuery } from "../../styles/mediaQuery";
 import Comment from "../episode/Comment";
 
 const CommentsList = ({ view, commentsData }) => {
@@ -29,5 +30,14 @@ const StyledRoot = styled.div`
 `;
 
 const StyledWrapper = styled.div`
-  padding-right: 19.8rem;
+  ${applyMediaQuery("desktop")} {
+    width: var(--screen-width);
+    padding-right: 19.8rem;
+  }
+  ${applyMediaQuery("tablet")} {
+    width: var(--screen-width);
+  }
+  ${applyMediaQuery("mobile")} {
+    width: var(--screen-width);
+  }
 `;

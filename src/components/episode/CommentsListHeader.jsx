@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-// import { applyMediaQuery } from "../styles/mediaQuery";
+import { applyMediaQuery } from "../../styles/mediaQuery";
 import cleanBot from "../../assets/images/img_cleanbot.png";
 import check from "../../assets/icons/ic_check.png";
 
@@ -35,14 +35,19 @@ const StyledRoot = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  & > * {
-    width: var(--screen-width);
-  }
 `;
 
 const StyledWrapper = styled.div`
-  padding-right: 19.8rem;
+  ${applyMediaQuery("desktop")} {
+    width: var(--screen-width);
+    padding-right: 19.8rem;
+  }
+  ${applyMediaQuery("tablet")} {
+    width: var(--screen-width);
+  }
+  ${applyMediaQuery("mobile")} {
+    width: var(--screen-width);
+  }
 `;
 
 const StyledBtnWrapper = styled.div`

@@ -1,36 +1,45 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import bestIcon from "../../assets/icons/ic_bestcomment.png";
 
 const Comment = ({ comment, view }) => {
   const { name, id, date, content } = comment;
+  const [number, setNumber] = useState(113);
+
+  const increaseNumber = () => {
+    setNumber(number + 1);
+  };
 
   // 좋아요 버튼 클릭했을 때 색변화
   // 좋아요 버튼 클릭했을 때 숫자 올라가게
   return (
     <StyledRoot>
-      <StyledHeader>
-        <span>
-          <img src={bestIcon} alt="bestIcon" className={view} />
-          {name}({id})
-        </span>
-        <span>{date}</span>
-      </StyledHeader>
-      <StyledContent>{content}</StyledContent>
-      <StyledFooter>
-        <div>답글</div>
-        <div>
-          <button>좋아요 113</button>
-          <button>싫어요</button>
-        </div>
-      </StyledFooter>
+      <StyledWrapper>
+        <StyledHeader>
+          <span>
+            <img src={bestIcon} alt="bestIcon" className={view} />
+            {name}({id})
+          </span>
+          <span>{date}</span>
+        </StyledHeader>
+        <StyledContent>{content}</StyledContent>
+        <StyledFooter>
+          <div>답글</div>
+          <div>
+            <button onClick={increaseNumber}>좋아요 {number}</button>
+            <button>싫어요</button>
+          </div>
+        </StyledFooter>
+      </StyledWrapper>
     </StyledRoot>
   );
 };
 
 export default Comment;
 
-const StyledRoot = styled.div`
+const StyledRoot = styled.div``;
+
+const StyledWrapper = styled.div`
   border-bottom: 0.1rem solid #e5e5e5;
   margin-bottom: 2.4rem;
   padding-bottom: 2.4rem;

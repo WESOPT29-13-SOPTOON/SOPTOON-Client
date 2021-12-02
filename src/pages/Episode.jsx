@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
-import CommentsListHeader from "../components/episode/CommentsListHeader";
 import WebtoonThumbnail from "../components/episode/WebtoonThumbnail";
+import CommentsListHeader from "../components/episode/CommentsListHeader";
 import CommentsListMain from "../components/episode/CommentsListMain";
 import CommentsListFooter from "../components/episode/CommentsListFooter";
 
