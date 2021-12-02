@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+// import { applyMediaQuery } from "../styles/mediaQuery";
 import cleanBot from "../../assets/images/img_cleanbot.png";
 import check from "../../assets/icons/ic_check.png";
 
