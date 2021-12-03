@@ -22,4 +22,13 @@ const Episode = () => {
   );
 };
 
+// const Center = styled.div`
+//   display: flex;
+//   justify-content: center;
+
+//   & > * {
+//     width: var(--screen-width);
+//   }
+// `;
+
 export default Episode;

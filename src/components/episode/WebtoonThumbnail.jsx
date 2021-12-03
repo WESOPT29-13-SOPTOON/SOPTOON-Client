@@ -46,7 +46,7 @@ const StyledHeader = styled.div`
 
 const StyledImgWrapper = styled.div`
   margin-right: 2.2rem;
-
+  float: left;
   & > img {
     width: 29.6rem;
     height: 16.4rem;

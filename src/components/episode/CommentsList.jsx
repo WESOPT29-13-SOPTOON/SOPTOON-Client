@@ -3,9 +3,10 @@ import styled from "styled-components";
 import { applyMediaQuery } from "../../styles/mediaQuery";
 import Comment from "../episode/Comment";
 
-const CommentsList = ({ view, commentsData }) => {
+const CommentsList = ({ view }) => {
   //구조 분해 할당
 
+  const commentsData = [];
   return (
     <StyledRoot>
       <StyledWrapper>
