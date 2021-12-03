@@ -5,6 +5,8 @@ import Button from "./genre/Button";
 import Tag from "./genre/Tag";
 import Card from "./genre/Card";
 import webtoonList from "./genre/webtoonList";
+import { applyMediaQuery } from "../../styles/mediaQuery";
+import Screen from "../../styles/Screen";
 
 const GenreWebtoon = () => {
   const tagList = ["일상", "개그", "판타지", "액션", "드라마", "순정", "감성", "스릴러", "시대극", "스포츠"];
@@ -15,10 +17,12 @@ const GenreWebtoon = () => {
         <p>
           장르별 <span>추천웹툰</span>
         </p>
-        <div>
-          <p>업데이트순</p>
-          <img src={downIcon} alt="down" />
-        </div>
+        <Screen desktop tablet>
+          <div>
+            <p>업데이트순</p>
+            <img src={downIcon} alt="down" />
+          </div>
+        </Screen>
       </StyledTitle>
       <StyledBody>
         <StyledLeft>
@@ -36,9 +40,16 @@ const GenreWebtoon = () => {
         </StyledLeft>
         <StyledRight>
           <div className="webtoons">
-            {webtoonList.map((webtoon, index) => (
-              <Card key={index} webtoon={webtoon} />
-            ))}
+            <Screen desktop tablet>
+              {webtoonList.map((webtoon, index) => (
+                <Card key={index} webtoon={webtoon} />
+              ))}
+            </Screen>
+            <Screen mobile>
+              {webtoonList.slice(0, 6).map((webtoon, index) => (
+                <Card key={index} webtoon={webtoon} />
+              ))}
+            </Screen>
           </div>
         </StyledRight>
       </StyledBody>
@@ -48,8 +59,13 @@ const GenreWebtoon = () => {
 
 const StyledRoot = styled.div`
   width: var(--screen-width);
-  margin-top: 15px;
+  margin: 15px auto;
   margin-bottom: 46px;
+
+  ${applyMediaQuery("mobile")} {
+    margin-top: 5px;
+    margin-bottom: 53px;
+  }
 `;
 
 const StyledTitle = styled.div`
@@ -77,6 +93,13 @@ const StyledTitle = styled.div`
       width: 6px;
     }
   }
+
+  ${applyMediaQuery("mobile")} {
+    justify-content: center;
+    p {
+      margin-bottom: 2px;
+    }
+  }
 `;
 
 const StyledBody = styled.div`
@@ -88,6 +111,14 @@ const StyledBody = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  ${applyMediaQuery("tablet")} {
+    padding: 15px;
+  }
+  ${applyMediaQuery("mobile")} {
+    flex-direction: column;
+    padding: 15px;
+  }
 `;
 
 const StyledLeft = styled.div`
@@ -104,6 +135,36 @@ const StyledLeft = styled.div`
     flex-wrap: wrap;
     margin-left: -52px;
   }
+
+  ${applyMediaQuery("tablet")} {
+    .tags {
+      height: 244px;
+      flex-wrap: nowrap;
+      margin-left: 0;
+    }
+  }
+  ${applyMediaQuery("mobile")} {
+    justify-content: center;
+    .buttons {
+      height: max-content;
+      display: flex;
+      flex-direction: row;
+      width: 277px;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .tags {
+      height: 47px;
+      width: 250px;
+      margin-top: 6px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-left: 0;
+    }
+  }
 `;
 
 const StyledRight = styled.div`
@@ -112,6 +173,20 @@ const StyledRight = styled.div`
     grid-template-columns: repeat(4, minmax(20%, auto));
     grid-column-gap: 10px;
     grid-row-gap: 10px;
+  }
+
+  ${applyMediaQuery("tablet")} {
+    .webtoons {
+      grid-column-gap: 8px;
+      grid-row-gap: 8px;
+    }
+  }
+  ${applyMediaQuery("mobile")} {
+    .webtoons {
+      grid-template-columns: repeat(3, minmax(20%, auto));
+      grid-column-gap: 8px;
+      grid-row-gap: 8px;
+    }
   }
 `;
 

@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { applyMediaQuery } from "../../../styles/mediaQuery";
 
 const Button = ({ text }) => {
   return <StyledButton text={text === "전체보기" ? true : false}>{text}</StyledButton>;
@@ -18,6 +19,15 @@ const StyledButton = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  ${applyMediaQuery("tablet")} {
+    width: 63px;
+    height: 25px;
+    margin: 7px;
+  }
+  ${applyMediaQuery("mobile")} {
+    margin: 4px;
+  }
 `;
 
 export default Button;
