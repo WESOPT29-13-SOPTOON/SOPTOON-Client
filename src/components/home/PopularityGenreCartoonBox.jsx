@@ -66,7 +66,6 @@ const StyledRoot = styled.section`
 `;
 
 const StyledBaseWrapper = styled.div`
-  width: 100%;
   background-color: #f9f9fc;
   border: 0.1rem solid #e5e5e5;
   border-radius: 1.6rem;
