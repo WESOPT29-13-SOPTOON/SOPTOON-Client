@@ -2,6 +2,7 @@ import React from "react";
 import Screen from "../styles/Screen";
 import styled from "styled-components";
 import { applyMediaQuery } from "../styles/mediaQuery";
+import GenreWebtoon from "../components/home/GenreWebtoon";
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
       <Screen mobile>
         <p>home mobile</p>
       </Screen>
+      <GenreWebtoon />
     </StyledRoot>
   );
 };
@@ -20,7 +22,6 @@ const StyledRoot = styled.div`
   ${applyMediaQuery("desktop")} {
     width: var(--screen-width); // 이렇게 전역변수 사용 가능!
     height: 30rem; // 컴포넌트에서는 rem 사용 완전 가능!
-    background-color: pink;
     margin: 0 auto;
   }
   ${applyMediaQuery("tablet")} {
