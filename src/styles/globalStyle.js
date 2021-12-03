@@ -13,6 +13,16 @@ const GlobalStyle = createGlobalStyle`
         font-family: 'Noto Sans KR', sans-serif;
     }
 
+    :root {
+        --screen-width: 80rem;
+    }
+
+    /* @media screen {
+        :root {
+            --screen-width: 100%;
+        }
+    } */
+
     * {
         box-sizing: border-box;
     }
