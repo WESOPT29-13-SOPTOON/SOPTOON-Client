@@ -1,36 +1,32 @@
 import React from "react";
 import styled from "styled-components";
 import { applyMediaQuery } from "../../styles/mediaQuery";
-import Comment from "../episode/Comment";
 
-const CommentsList = ({ view }) => {
-  //구조 분해 할당
-
-  const commentsData = [];
+const CommentsListFooter = () => {
   return (
     <StyledRoot>
-      <StyledWrapper>
-        {commentsData.map((comment, i) => (
-          <Comment view={view} comment={comment} key={`comment-${i}`} />
-        ))}
-      </StyledWrapper>
+      <StyledWrapper>전체 댓글 더보기 &gt;</StyledWrapper>
     </StyledRoot>
   );
 };
 
-export default CommentsList;
+export default CommentsListFooter;
 
 const StyledRoot = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  & > * {
-    width: var(--screen-width);
-  }
 `;
 
 const StyledWrapper = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  color: #737373;
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: -0.1rem;
+  margin-bottom: 10.3rem;
+
   ${applyMediaQuery("desktop")} {
     width: var(--screen-width);
     padding-right: 19.8rem;

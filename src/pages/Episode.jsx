@@ -1,26 +1,34 @@
 import React from "react";
-import styled from "styled-components";
-import CommentsList from "../components/episode/CommentsList";
+import { useState } from "react";
+// import { useLocation } from "react-router-dom";
 import WebtoonThumbnail from "../components/episode/WebtoonThumbnail";
+import CommentsListHeader from "../components/episode/CommentsListHeader";
+import CommentsListMain from "../components/episode/CommentsListMain";
+import CommentsListFooter from "../components/episode/CommentsListFooter";
 
 const Episode = () => {
+  const [view, setView] = useState("");
+  // const location = useLocation();
+  // const id = location.state.id;
+  const id = 1;
+
   return (
     <div>
       <WebtoonThumbnail />
-      <Center>
-        <CommentsList />
-      </Center>
+      <CommentsListHeader setView={setView} />
+      <CommentsListMain view={view} id={id} />
+      <CommentsListFooter />
     </div>
   );
 };
 
-const Center = styled.div`
-  display: flex;
-  justify-content: center;
+// const Center = styled.div`
+//   display: flex;
+//   justify-content: center;
 
-  & > * {
-    width: var(--screen-width);
-  }
-`;
+//   & > * {
+//     width: var(--screen-width);
+//   }
+// `;
 
 export default Episode;
