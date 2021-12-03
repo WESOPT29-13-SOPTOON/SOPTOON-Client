@@ -1,15 +1,7 @@
-import "./App.css";
+import MainRouter from "./routes/MainRouter";
 
 function App() {
-  return (
-    <div className="App">
-      <Button>hey</Button>
-    </div>
-  );
-}
-
-function Button(props) {
-  return <button>{props.children}</button>;
+  return <MainRouter />;
 }
 
 export default App;
