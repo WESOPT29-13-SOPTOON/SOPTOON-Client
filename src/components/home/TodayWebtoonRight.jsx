@@ -39,6 +39,7 @@ export default TodayWebtoonRight;
 
 const StyledRight = styled.div`
   margin-left: 2.116rem;
+  margin-top: 26px;
 `;
 
 const StyledNewComic = styled.div`

@@ -8,9 +8,20 @@ const GlobalStyle = createGlobalStyle`
         height: 100%;
         padding: 0;
         margin: 0;
+        width: 100vw;
         font-size: 62.5%;
         font-family: 'Noto Sans KR', sans-serif;
     }
+
+    :root {
+        --screen-width: 80rem;
+    }
+
+    /* @media screen {
+        :root {
+            --screen-width: 100%;
+        }
+    } */
 
     * {
         box-sizing: border-box;
