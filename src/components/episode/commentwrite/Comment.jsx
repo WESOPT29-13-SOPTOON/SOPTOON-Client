@@ -20,7 +20,7 @@ const Comment = ({ handleSubmit }) => {
       <p className="title">의견 쓰기</p>
       <StyledBottom count={count === 0 ? false : true}>
         <div className="input-box">
-          <form onSubmit={(e) => handleSubmit(e, input)}>
+          <form onSubmit={(e) => handleSubmit(e, input, setInput)}>
             <div className="input-top">
               <p className="writer">솝트</p>
               <textarea

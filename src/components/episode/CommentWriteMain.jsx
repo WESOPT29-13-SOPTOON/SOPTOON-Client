@@ -5,7 +5,7 @@ import Comment from "./commentwrite/Comment";
 import { postComment } from "../../libs/api";
 
 const CommentWriteMain = ({ writer = "이동건", webtoonId = 1, email = "kkkkk121", addComment }) => {
-  const handleSubmit = async (e, input) => {
+  const handleSubmit = async (e, input, setInput) => {
     e.preventDefault();
     const data = await postComment({ webtoonId, email, comment: input });
     addComment({
@@ -13,6 +13,7 @@ const CommentWriteMain = ({ writer = "이동건", webtoonId = 1, email = "kkkkk1
       email,
       ...data.data[0],
     });
+    setInput("");
   };
 
   return (
