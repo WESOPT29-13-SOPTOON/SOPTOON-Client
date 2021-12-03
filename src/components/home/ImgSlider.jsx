@@ -6,6 +6,7 @@ import today3 from "../../assets/images/img_today3.png";
 import viewBtn from "../../assets/icons/ic_viewmore.svg";
 import circleBtn from "../../assets/icons/ic_circle.svg";
 import { applyMediaQuery } from "../../styles/mediaQuery";
+import Screen from "../../styles/Screen";
 
 const ImgSlader = () => {
   // 화살표 눌렀을 때 이미지 움직이기
@@ -15,17 +16,21 @@ const ImgSlader = () => {
     <StyledRoot>
       <div>11월 10일 수요일</div>
       <StyledSlader>
-        <button>
-          <img src={viewBtn} />
-        </button>
+        <Screen desktop>
+          <button>
+            <img src={viewBtn} />
+          </button>
+        </Screen>
         <StyledImg>
           <img src={today1} />
           <img src={today2} />
           <img src={today3} />
         </StyledImg>
-        <button>
-          <img src={viewBtn} />
-        </button>
+        <Screen desktop>
+          <button>
+            <img src={viewBtn} />
+          </button>
+        </Screen>
       </StyledSlader>
       <StyledBtn>
         <button>
@@ -74,11 +79,8 @@ const StyledSlader = styled.div`
     margin-top: 8rem;
   }
 
-  button:nth-child(1) {
-    transform: scaleX(-1);
-  }
-
-  button:hover {
+  button:nth-child(3) {
+    transform: rotate(180deg);
   }
 `;
 
@@ -87,9 +89,54 @@ const StyledImg = styled.div`
   flex-direction: row;
 
   & > img {
-    width: 30.6rem;
-    height: 16.8rem;
+    ${applyMediaQuery("desktop")} {
+      width: 30.6rem;
+      height: 16.8rem;
+    }
+    ${applyMediaQuery("tablet")} {
+      width: 23.8rem;
+      height: 13rem;
+    }
+    ${applyMediaQuery("mobile")} {
+      width: 19.5rem;
+      height: 11.1rem;
+    }
     border-radius: 0.6rem;
+    position: relative;
+
+    &:nth-child(1) {
+      transform: scale(0.8);
+      ${applyMediaQuery("tablet")} {
+        left: -20px;
+      }
+      ${applyMediaQuery("mobile")} {
+        left: -30px;
+      }
+    }
+    &:nth-child(2) {
+      z-index: 2;
+      left: -180px;
+    }
+    &:nth-child(3) {
+      transform: scale(0.8);
+      left: -360px;
+      ${applyMediaQuery("tablet")} {
+        left: -340px;
+      }
+      ${applyMediaQuery("mobile")} {
+        left: -330px;
+      }
+    }
+  }
+
+  ${applyMediaQuery("desktop")} {
+    width: 49.717rem;
+  }
+  ${applyMediaQuery("tablet")} {
+    width: 26.103rem;
+  }
+  ${applyMediaQuery("mobile")} {
+    width: 20.233rem;
   }
 `;
 
