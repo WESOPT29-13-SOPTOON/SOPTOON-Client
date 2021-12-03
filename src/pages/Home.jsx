@@ -28,6 +28,7 @@ const StyledRoot = styled.div`
   }
   ${applyMediaQuery("mobile")} {
     width: 100%;
+  }
 `;
 
 export default Home;

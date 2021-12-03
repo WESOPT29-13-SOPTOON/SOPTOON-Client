@@ -1,11 +1,14 @@
 import React from "react";
 import styled from "styled-components";
+import { useNavigate } from "react-router";
 
 const Card = ({ webtoon }) => {
   const { image, title, episode, writer } = webtoon;
 
+  const navigate = useNavigate();
+
   return (
-    <StyledRoot>
+    <StyledRoot onClick={() => navigate("/episode")}>
       <img src={image} alt="webtoon" />
       <p className="title">{title}</p>
       <p className="episode">{episode}</p>
@@ -17,6 +20,9 @@ const Card = ({ webtoon }) => {
 const StyledRoot = styled.div`
   width: 176px;
   height: 237px;
+  &:hover {
+    cursor: pointer;
+  }
 
   img {
     width: 176px;
