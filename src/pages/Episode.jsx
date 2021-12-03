@@ -1,7 +1,12 @@
 import React from "react";
+import CommentWriteMain from "../components/episode/CommentWriteMain";
 
 const Episode = () => {
-  return <div>episode</div>;
+  return (
+    <div>
+      <CommentWriteMain />
+    </div>
+  );
 };
 
 export default Episode;
