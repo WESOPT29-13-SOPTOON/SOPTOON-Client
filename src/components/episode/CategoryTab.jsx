@@ -12,6 +12,7 @@ const CategoryTab = () => {
   const handleClick = (idx) => {
     setSelectedCategory(idx);
   };
+
   return (
     <StyledRoot>
       <StyledCategoryTab>
