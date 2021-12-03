@@ -3,15 +3,13 @@ import styled from "styled-components";
 import { applyMediaQuery } from "../../styles/mediaQuery";
 import Comment from "../episode/Comment";
 
-const CommentsList = ({ view }) => {
+const CommentsList = ({ commentsData, view }) => {
   //구조 분해 할당
-
-  const commentsData = [];
   return (
     <StyledRoot>
       <StyledWrapper>
         {commentsData.map((comment, i) => (
-          <Comment view={view} comment={comment} key={`comment-${i}`} />
+          <Comment view={view} data={comment} key={`comment-${i}`} />
         ))}
       </StyledWrapper>
     </StyledRoot>

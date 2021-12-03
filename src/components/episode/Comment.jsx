@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import bestIcon from "../../assets/icons/ic_bestcomment.png";
 
-const Comment = ({ comment, view }) => {
-  const { name, id, date, content } = comment;
+const Comment = ({ data, view }) => {
+  const { nickname, email, createdAt, comment } = data;
 
   const [Commentlikes, setCommentLikes] = useState(113);
   const [isCommentLikeClicked, setIsCommentLikeClicked] = useState(false);
@@ -72,11 +72,11 @@ const Comment = ({ comment, view }) => {
         <StyledHeader>
           <span>
             <img src={bestIcon} alt="bestIcon" className={view} />
-            {name}({id})
+            {nickname}({email})
           </span>
-          <span>{date}</span>
+          <span>{createdAt.slice(0, 10)}</span>
         </StyledHeader>
-        <StyledContent>{content}</StyledContent>
+        <StyledContent>{comment}</StyledContent>
         <StyledFooter>
           <div>답글</div>
           <div>
