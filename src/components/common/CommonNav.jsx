@@ -21,6 +21,7 @@ const CommonNav = () => {
   const handleClick = (refButton) => {
     clicked.current.style = "background:white; color:black;";
     refButton.current.style = "background:#60d171; color:white;";
+
     setClicked(refButton);
   };
 
