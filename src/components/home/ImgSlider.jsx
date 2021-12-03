@@ -75,10 +75,7 @@ const StyledSlader = styled.div`
   }
 
   button:nth-child(1) {
-    transform: scaleX(-1);
-  }
-
-  button:hover {
+    transform: rotate(180deg);
   }
 `;
 
