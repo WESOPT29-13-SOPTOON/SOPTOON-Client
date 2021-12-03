@@ -65,12 +65,8 @@ const StyledWeeklyTab = styled.div`
   background-color: #f9f9fc;
   border-radius: 1.6rem;
   width: 64.5rem;
-  ${applyMediaQuery("tablet")} {
-    margin-left: 3.2rem;
-  }
   ${applyMediaQuery("mobile")} {
     width: 17.6rem;
-    margin-left: 2.35rem;
   }
   height: 5rem;
   padding: 1.7rem 2.4rem 1.8rem 2.4rem;

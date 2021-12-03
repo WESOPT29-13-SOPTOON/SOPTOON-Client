@@ -18,9 +18,9 @@ const LocalNav = () => {
 const StyledRoot = styled.div`
   display: flex;
   align-items: center;
-  ${applyMediaQuery("mobile")} {
+  /* ${applyMediaQuery("mobile")} {
     align-items: stretch;
-  }
+  } */
   flex-direction: column;
 
   & > * {

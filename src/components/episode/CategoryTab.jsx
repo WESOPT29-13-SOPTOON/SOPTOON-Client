@@ -45,11 +45,8 @@ const CategoryTab = () => {
 
 const StyledRoot = styled.section`
   padding: 1.2rem 0 1.5rem 2.4rem;
-  ${applyMediaQuery("tablet")} {
-    margin-left: 3.1rem;
-  }
   ${applyMediaQuery("mobile")} {
-    margin-left: 0.2rem;
+    padding-left: 0;
   }
 `;
 
