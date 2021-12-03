@@ -65,6 +65,7 @@ const StyledRoot = styled.div`
 const StyledLeft = styled.div`
   display: flex;
   align-items: center;
+
   .naver-logo-icon {
     margin-left: 20px;
     width: 48px;
@@ -109,6 +110,7 @@ const StyledLeft = styled.div`
 const StyledRight = styled.div`
   display: flex;
   align-items: center;
+
   .profile {
     margin: 6px;
     font-size: 10px;
