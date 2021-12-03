@@ -1,22 +1,26 @@
 import React from "react";
 import styled from "styled-components";
+import { applyMediaQuery } from "../../styles/mediaQuery";
 import CategoryTab from "./CategoryTab";
 import WeeklyTab from "./WeeklyTab";
 
 const LocalNav = () => {
   return (
-    <StyledLocalNav>
+    <StyledRoot>
       <CategoryTab />
       <Line />
       <WeeklyTab />
       <Line />
-    </StyledLocalNav>
+    </StyledRoot>
   );
 };
 
-const StyledLocalNav = styled.div`
+const StyledRoot = styled.div`
   display: flex;
   align-items: center;
+  ${applyMediaQuery("mobile")} {
+    align-items: stretch;
+  }
   flex-direction: column;
 
   & > * {

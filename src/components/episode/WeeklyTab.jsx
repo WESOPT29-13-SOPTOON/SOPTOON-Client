@@ -1,69 +1,78 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styled, { css } from "styled-components";
+import { applyMediaQuery } from "../../styles/mediaQuery";
+import Screen from "../../styles/Screen";
 import TabItem from "./TabItem";
 
 const week = ["요일전체", "월요웹툰", "화요웹툰", "수요웹툰", "목요웹툰", "금요웹툰", "토요웹툰", "일요웹툰"];
 
 const WeeklyTab = () => {
   const [selectedDay, setSelectedDay] = useState(0);
+  const [mobileWeekArr, setMobileWeekArr] = useState(["요일전체", "월요웹툰"]);
+  const [mobileSelectedDay, setMobileSelectedDay] = useState(0);
 
   const handleClick = (idx) => {
     setSelectedDay(idx);
   };
 
+  const handleMobileClick = (idx) => {
+    setMobileSelectedDay(idx);
+  };
+
+  useEffect(() => {
+    if (week[selectedDay] === "요일전체") return;
+    setMobileWeekArr(["요일전체", week[selectedDay]]);
+  }, [selectedDay]);
+
   return (
     <StyledRoot>
       <StyledWeeklyTab>
-        <StyledBack idx={selectedDay}></StyledBack>
-        {week.map((day, idx) => (
-          <TabItem
-            key={idx}
-            value={day}
-            isSelected={selectedDay === idx}
-            color={"#60d171"}
-            onClick={() => handleClick(idx)}
-          />
-        ))}
+        <Screen desktop tablet>
+          <StyledBack idx={selectedDay}></StyledBack>
+          {week.map((day, idx) => (
+            <TabItem
+              key={idx}
+              value={day}
+              isSelected={selectedDay === idx}
+              color={"#60d171"}
+              onClick={() => handleClick(idx)}
+            />
+          ))}
+        </Screen>
+        <Screen mobile>
+          <StyledBack idx={mobileSelectedDay}></StyledBack>
+          {mobileWeekArr.map((day, idx) => (
+            <TabItem
+              key={idx}
+              value={day}
+              isSelected={mobileSelectedDay === idx}
+              color={"#60d171"}
+              onClick={() => handleMobileClick(idx)}
+            />
+          ))}
+        </Screen>
       </StyledWeeklyTab>
     </StyledRoot>
-    //<StyledRoot>
-    // <Screen tablet mobile>
-    //  <TabItem
-    //   value={"요일전체"}
-    //   isSelected={selectedDay === idx}
-    //   color={"#60d171"}
-    //   onClick={() => handleClick(idx)}
-    // />
-    //  {week.filter((tab, idx) => selectedDay === idx).map((day, idx) => (
-    //  <TabItem
-    //   key={idx}
-    //   value={day}
-    //   isSelected={selectedDay === idx}
-    //   color={"#60d171"}
-    //   onClick={() => handleClick(idx)}
-    // />
-    //))}
-    // </Screen>
-    //</StyledRoot>
   );
 };
 
 const StyledRoot = styled.section`
   padding: 1.6rem 0;
 `;
-// @media ${({ theme }) => theme.device.tablet} {
-//     padding: 1.6rem 3.2rem;
-//   }
-//타블렛에서 모바일 가는 사이를 하나더 정의해 놓을지?
-//내꺼가 타블렛에서 모바일 가는 사이를 100%로 놓고 점점 줄어들게 할 수가 없는 부분이 있어서
 
 const StyledWeeklyTab = styled.div`
   position: relative;
   background-color: #f9f9fc;
   border-radius: 1.6rem;
   width: 64.5rem;
+  ${applyMediaQuery("tablet")} {
+    margin-left: 3.2rem;
+  }
+  ${applyMediaQuery("mobile")} {
+    width: 17.6rem;
+    margin-left: 2.35rem;
+  }
   height: 5rem;
-  /* width: 17.6rem; 모바일 반응형 */
   padding: 1.7rem 2.4rem 1.8rem 2.4rem;
   display: flex;
   align-items: center;
@@ -84,8 +93,9 @@ const StyledBack = styled.span`
   width: 8.4rem;
   height: 3.2rem;
   margin: 0;
-  border-radius: 0.5rem;
+  border-radius: 0.8rem;
   background-color: #ffffff;
+  box-shadow: 0 0 0.3rem 0 #a6a1bb;
   transition: transform 0.3s;
   ${({ idx }) =>
     css`
