@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import SideButton from "./SideButton";
 import plusIcon from "../../../assets/icons/ic_plus.svg";
+import { applyMediaQuery } from "../../../styles/mediaQuery";
+import Screen from "../../../styles/Screen";
 
 const Comment = ({ handleSubmit }) => {
   const [count, setCount] = useState(0);
@@ -37,11 +39,13 @@ const Comment = ({ handleSubmit }) => {
             </div>
           </form>
         </div>
-        <div className="button-wrap">
-          <SideButton icon={plusIcon} text="관심웹툰" />
-          <SideButton text="첫회보기" />
-          <SideButton text="목록보기" />
-        </div>
+        <Screen desktop tablet>
+          <div className="button-wrap">
+            <SideButton icon={plusIcon} text="관심웹툰" />
+            <SideButton text="첫회보기" />
+            <SideButton text="목록보기" />
+          </div>
+        </Screen>
       </StyledBottom>
     </StyledRoot>
   );
@@ -56,6 +60,14 @@ const StyledRoot = styled.div`
     font-weight: bold;
     font-size: 20px;
     margin-bottom: 10px;
+  }
+
+  ${applyMediaQuery("mobile")} {
+    height: 204px;
+    padding: 0;
+    .title {
+      font-size: 15px;
+    }
   }
 `;
 
@@ -122,6 +134,49 @@ const StyledBottom = styled.div`
     color: ${(props) => (props.count ? "white" : "#727272")};
     font-size: 15px;
     font-weight: bold;
+  }
+
+  ${applyMediaQuery("tablet")} {
+    .input-box {
+      width: 520px;
+      height: 198px;
+    }
+    .writer {
+      margin: 16px;
+      margin-bottom: 8px;
+    }
+    textarea {
+      width: 448px;
+    }
+    .input-bottom {
+      width: 520px;
+    }
+    .register-button {
+      margin-right: 2px;
+      height: 46px;
+    }
+  }
+
+  ${applyMediaQuery("mobile")} {
+    .input-box {
+      width: 312px;
+      height: 168px;
+    }
+    .writer {
+      margin: 16px;
+      margin-bottom: 8px;
+    }
+    textarea {
+      width: 280px;
+      height: 42px;
+    }
+    .input-bottom {
+      width: 312px;
+    }
+    .register-button {
+      margin-right: 2px;
+      height: 46px;
+    }
   }
 `;
 

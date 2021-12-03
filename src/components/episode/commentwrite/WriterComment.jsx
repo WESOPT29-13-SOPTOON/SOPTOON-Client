@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { applyMediaQuery } from "../../../styles/mediaQuery";
 
 const WriterComment = ({ writer }) => {
   return (
@@ -26,6 +27,14 @@ const StyledRoot = styled.div`
   span {
     font-size: 12.5px;
     font-weight: normal;
+  }
+
+  ${applyMediaQuery("mobile")} {
+    height: 58px;
+    p {
+      font-size: 15px;
+      padding-left: 0;
+    }
   }
 `;
 

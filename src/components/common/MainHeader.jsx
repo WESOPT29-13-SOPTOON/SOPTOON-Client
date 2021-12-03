@@ -10,6 +10,7 @@ import searchIcon from "../../assets/icons/ic_search.svg";
 import line from "../../assets/icons/line.svg";
 import StyledLine from "./StyledLine";
 import Screen from "../../styles/Screen";
+import { applyMediaQuery } from "../../styles/mediaQuery";
 
 const MainHeader = () => {
   return (
@@ -103,6 +104,12 @@ const StyledLeft = styled.div`
     }
     &:focus {
       outline: none;
+    }
+  }
+
+  ${applyMediaQuery("mobile")} {
+    .naver-logo-icon {
+      margin-left: 0;
     }
   }
 `;

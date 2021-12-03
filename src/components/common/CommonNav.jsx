@@ -27,47 +27,33 @@ const CommonNav = () => {
   return (
     <>
       <StyledRoot>
-        <Screen desktop tablet>
-          <StyledLeft>
-            <button ref={homeButton} onClick={() => handleClick(homeButton)}>
-              홈
-            </button>
-            <button ref={webtoonButton} onClick={() => handleClick(webtoonButton)}>
-              웹툰
-            </button>
-            <button ref={bestButton} onClick={() => handleClick(bestButton)}>
-              베스트 도전
-            </button>
-            <button ref={challengeButton} onClick={() => handleClick(challengeButton)}>
-              도전만화
-            </button>
+        <StyledLeft>
+          <button ref={homeButton} onClick={() => handleClick(homeButton)}>
+            홈
+          </button>
+          <button ref={webtoonButton} onClick={() => handleClick(webtoonButton)}>
+            웹툰
+          </button>
+          <button ref={bestButton} onClick={() => handleClick(bestButton)}>
+            베스트 도전
+          </button>
+          <button ref={challengeButton} onClick={() => handleClick(challengeButton)}>
+            도전만화
+          </button>
+          <Screen desktop tablet>
             <button ref={myPageButton} onClick={() => handleClick(myPageButton)}>
               마이페이지
             </button>
             <img src={line} alt="line" />
             <p>단행본 만화</p>
             <p>장르소설</p>
-          </StyledLeft>
+          </Screen>
+        </StyledLeft>
+        <Screen desktop tablet>
           <StyledRight>
             <img className="notice-icon" src={noticeIcon} alt="notice" />
             <p>수호신을 가진 남자 &lt;수호하는 너에게&gt;</p>
           </StyledRight>
-        </Screen>
-        <Screen mobile>
-          <StyledLeft>
-            <button ref={homeButton} onClick={() => handleClick(homeButton)}>
-              홈
-            </button>
-            <button ref={webtoonButton} onClick={() => handleClick(webtoonButton)}>
-              웹툰
-            </button>
-            <button ref={bestButton} onClick={() => handleClick(bestButton)}>
-              베스트 도전
-            </button>
-            <button ref={challengeButton} onClick={() => handleClick(challengeButton)}>
-              도전만화
-            </button>
-          </StyledLeft>
         </Screen>
       </StyledRoot>
       <StyledLine />
