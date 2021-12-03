@@ -5,6 +5,7 @@ import WebtoonThumbnail from "../components/episode/WebtoonThumbnail";
 import CommentsListHeader from "../components/episode/CommentsListHeader";
 import CommentsListMain from "../components/episode/CommentsListMain";
 import CommentsListFooter from "../components/episode/CommentsListFooter";
+import View from "../components/episode/View";
 
 const Episode = () => {
   const [view, setView] = useState("");
@@ -15,6 +16,7 @@ const Episode = () => {
   return (
     <div>
       <WebtoonThumbnail />
+      <View />
       <CommentsListHeader setView={setView} />
       <CommentsListMain view={view} id={id} />
       <CommentsListFooter />
