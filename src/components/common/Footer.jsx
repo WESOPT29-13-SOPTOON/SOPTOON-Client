@@ -26,7 +26,6 @@ const initRightFooterData = () => {
 const Footer = () => {
   return (
     <StyledRoot>
-      <Line />
       <Screen desktop tablet>
         <StyledBaseWrapper>
           <FooterBase list={initLeftFooterData()} />
@@ -50,6 +49,7 @@ const StyledRoot = styled.footer`
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 36px;
 
   & > * {
     width: var(--screen-width);
@@ -98,12 +98,6 @@ const StyledBaseWrapper = styled.div`
     height: 3.5rem;
     background-color: #d2d2d2;
   }
-`;
-
-const Line = styled.div`
-  width: 100%;
-  height: 0.1rem;
-  background-color: #d2d2d2;
 `;
 
 export default Footer;

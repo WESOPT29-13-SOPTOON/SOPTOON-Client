@@ -5,7 +5,6 @@ import ChallengeWebtoonBox from "../components/home/ChallengeWebtoonBox";
 import PopularityGenreCartoonBox from "../components/home/PopularityGenreCartoonBox";
 import TodayWebtoon from "../components/home/TodayWebtoon";
 import GenreWebtoon from "../components/home/GenreWebtoon";
-import Footer from "../components/common/Footer";
 
 const Home = () => {
   return (
@@ -14,7 +13,6 @@ const Home = () => {
       <GenreWebtoon />
       <ChallengeWebtoonBox />
       <PopularityGenreCartoonBox />
-      <Footer />
     </StyledRoot>
   );
 };

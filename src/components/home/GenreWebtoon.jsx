@@ -48,10 +48,12 @@ const GenreWebtoon = () => {
 
 const StyledRoot = styled.div`
   width: var(--screen-width);
+  margin-top: 15px;
+  margin-bottom: 46px;
 `;
 
 const StyledTitle = styled.div`
-  margin: 20px;
+  padding: 20px;
   display: flex;
   justify-content: space-between;
   p {

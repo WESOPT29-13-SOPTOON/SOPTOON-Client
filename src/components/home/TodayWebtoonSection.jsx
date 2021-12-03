@@ -28,6 +28,7 @@ export default TodayWebtoonSection;
 
 const StyledRoot = styled.div`
   border: 0.2rem solid #e5e5e5;
+  margin-top: 26px;
 `;
 
 const StyledWrapper = styled.div`
