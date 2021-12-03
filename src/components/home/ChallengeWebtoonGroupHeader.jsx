@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { applyMediaQuery } from "../../styles/mediaQuery";
 
 const ChallengeWebtoonGroupHeader = ({ groupName }) => {
   return (
@@ -13,6 +14,7 @@ const ChallengeWebtoonGroupHeader = ({ groupName }) => {
 const StyledRoot = styled.div`
   display: flex;
   align-items: center;
+  /* position: relative; */
   & > span {
     width: 7.2rem;
     height: 2.8rem;
@@ -21,6 +23,10 @@ const StyledRoot = styled.div`
     border-radius: 1.8rem;
     line-height: 2.8rem;
     text-align: center;
+    ${applyMediaQuery("mobile")} {
+      position: absolute;
+      left: 40%;
+    }
   }
 `;
 

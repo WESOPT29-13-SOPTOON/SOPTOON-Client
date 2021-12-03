@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { applyMediaQuery } from "../../styles/mediaQuery";
 import PopularityGenreCartoonBase from "./PopularityGenreCartoonBase";
 
 const genre = ["순정", "소년", "무협"];
@@ -36,10 +37,25 @@ const PopularityGenreCartoonBox = () => {
 };
 
 const StyledRoot = styled.section`
-  width: var(--screen-width);
-  margin-bottom: 6.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  ${applyMediaQuery("desktop")} {
+    margin-bottom: 6.5rem;
+  }
+  ${applyMediaQuery("tablet")} {
+    margin-bottom: 9.2rem;
+  }
+  ${applyMediaQuery("mobile")} {
+    margin-bottom: 9.36rem;
+  }
+
+  & > * {
+    width: var(--screen-width);
+  }
+
   & > h2 {
-    margin-left: 2rem;
+    padding-left: 2rem;
     font-size: 2.2rem;
     font-weight: 600;
     color: #000000;
@@ -51,22 +67,44 @@ const StyledRoot = styled.section`
 
 const StyledBaseWrapper = styled.div`
   width: 100%;
-  height: 34.3rem;
   background-color: #f9f9fc;
   border: 0.1rem solid #e5e5e5;
   border-radius: 1.6rem;
-  margin-top: 1.9rem;
   display: flex;
+  ${applyMediaQuery("desktop")} {
+    margin-top: 2.7rem;
+    height: 34.3rem;
+  }
+  ${applyMediaQuery("tablet")} {
+    margin-top: 2.1rem;
+    height: 27rem;
+  }
+  ${applyMediaQuery("mobile")} {
+    margin-top: 2.5rem;
+    height: 35rem;
+    justify-content: space-around;
+  }
+
   & > * {
-    margin-top: 3.949rem;
-    margin-right: 6.479rem;
+    ${applyMediaQuery("desktop")} {
+      margin-top: 3.949rem;
+      margin-right: 6.479rem;
+    }
+    ${applyMediaQuery("tablet")} {
+      margin-top: 3.1rem;
+      margin-right: 3rem;
+    }
+    ${applyMediaQuery("mobile")} {
+      margin-top: 2.7rem;
+    }
   }
   & > *:first-child {
-    margin-top: 3.949rem;
-    margin-left: 6.11rem;
-  }
-  & > *:last-child {
-    margin-right: 6.6rem;
+    ${applyMediaQuery("desktop")} {
+      margin-left: 6.11rem;
+    }
+    ${applyMediaQuery("tablet")} {
+      margin-left: 4.9rem;
+    }
   }
 `;
 

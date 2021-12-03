@@ -3,6 +3,7 @@ import styled from "styled-components";
 import BaseInfoWrapper from "./BaseInfoWrapper";
 import CartoonInfo from "./CartoonInfo";
 import { ReactComponent as ViewmoreIcon } from "../../assets/icons/ic_viewmore@3x.svg";
+import { applyMediaQuery } from "../../styles/mediaQuery";
 
 const PopularityGenreCartoonBase = ({ genreName, data }) => {
   return (
@@ -49,15 +50,42 @@ const StyledBaseInfos = styled.div`
   & > * {
     display: flex;
     align-items: center;
-    margin-top: 2.54rem;
+    ${applyMediaQuery("mobile")} {
+      flex-direction: column;
+    }
 
     img {
-      width: 8.1rem;
-      height: 9.9rem;
+      width: 6.3rem;
+      height: 7.8rem;
+      ${applyMediaQuery("desktop")} {
+        width: 8.1rem;
+        height: 9.9rem;
+      }
     }
   }
-  & > *:first-child {
-    margin-top: 1.922rem;
+  ${applyMediaQuery("desktop")} {
+    & > *:first-child {
+      margin-top: 1.922rem;
+    }
+    & > *:last-child {
+      margin-top: 2.54rem;
+    }
+  }
+  ${applyMediaQuery("tablet")} {
+    & > *:first-child {
+      margin-top: 1.3rem;
+    }
+    & > *:last-child {
+      margin-top: 2rem;
+    }
+  }
+  ${applyMediaQuery("mobile")} {
+    & > *:first-child {
+      margin-top: 1.1rem;
+    }
+    & > *:last-child {
+      margin-top: 2.6rem;
+    }
   }
 `;
 

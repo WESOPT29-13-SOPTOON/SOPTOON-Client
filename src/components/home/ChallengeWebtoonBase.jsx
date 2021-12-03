@@ -3,6 +3,7 @@ import styled from "styled-components";
 import BaseInfoWrapper from "./BaseInfoWrapper";
 import WebtoonInfo from "./WebtoonInfo";
 import ChallengeWebtoonGroupHeader from "./ChallengeWebtoonGroupHeader";
+import { applyMediaQuery } from "../../styles/mediaQuery";
 
 const ChallengeWebtoonBase = ({ groupName, data }) => {
   return (
@@ -24,28 +25,69 @@ const StyledRoot = styled.div`
   justify-content: center;
   flex-direction: column;
   & > * {
-    margin-right: 2.7rem;
-    margin-left: 3.6rem;
     font-size: 1.2rem;
+    ${applyMediaQuery("desktop")} {
+      margin-right: 2.7rem;
+      margin-left: 3.6rem;
+    }
+    ${applyMediaQuery("tablet")} {
+      margin-right: 1.9rem;
+      margin-left: 2.1rem;
+    }
+    ${applyMediaQuery("mobile")} {
+      margin: 0;
+    }
   }
 `;
 
 const StyledBaseInfos = styled.div`
   display: flex;
-  margin-right: 3.8rem;
+  ${applyMediaQuery("tablet")} {
+    margin-left: 3.6rem;
+  }
+  ${applyMediaQuery("tablet")} {
+    margin-left: 3.5rem;
+  }
+  ${applyMediaQuery("mobile")} {
+    /* margin-left: 2.5rem; */
+    width: 100%;
+    justify-content: space-around;
+  }
+
   & > * {
     display: flex;
     align-items: center;
-    margin-top: 2rem;
-    margin-right: 1.4rem;
+
+    ${applyMediaQuery("desktop")} {
+      margin-right: 1.4rem;
+      margin-top: 2rem;
+    }
+    ${applyMediaQuery("tablet")} {
+      margin-top: 0.9rem;
+      margin-right: 1.1rem;
+    }
+    ${applyMediaQuery("mobile")} {
+      flex-direction: column;
+      align-items: center;
+      margin-top: 2.8rem;
+    }
+
     img {
-      width: 7.6rem;
-      height: 7.6rem;
+      ${applyMediaQuery("desktop")} {
+        width: 7.6rem;
+        height: 7.6rem;
+      }
+      width: 6.6rem;
+      height: 6.6rem;
     }
   }
+
   & > *:first-child {
-    margin-left: 9.5rem;
+    ${applyMediaQuery("desktop")} {
+      margin-left: 9.5rem;
+    }
   }
+
   & > *:last-child {
     margin-right: 0;
   }

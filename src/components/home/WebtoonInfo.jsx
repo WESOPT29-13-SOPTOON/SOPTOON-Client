@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import { ReactComponent as StarIcon } from "../../assets/icons/full-star.svg";
+import { applyMediaQuery } from "../../styles/mediaQuery";
+import Screen from "../../styles/Screen";
 
 const WebtoonInfo = ({ data }) => {
   const { title, author, content, starRating } = data;
@@ -8,15 +10,17 @@ const WebtoonInfo = ({ data }) => {
     <StyledRoot>
       <h3>{title}</h3>
       <h4>{author}</h4>
-      <p>{content}</p>
-      <StyledStarRating>
-        <StarIcon />
-        <StarIcon />
-        <StarIcon />
-        <StarIcon />
-        <StarIcon />
-        <span>{starRating}</span>
-      </StyledStarRating>
+      <Screen desktop tablet>
+        <p>{content}</p>
+        <StyledStarRating>
+          <StarIcon />
+          <StarIcon />
+          <StarIcon />
+          <StarIcon />
+          <StarIcon />
+          <span>{starRating}</span>
+        </StyledStarRating>
+      </Screen>
     </StyledRoot>
   );
 };
@@ -24,7 +28,12 @@ const WebtoonInfo = ({ data }) => {
 const StyledRoot = styled.div`
   display: flex;
   flex-direction: column;
-  margin-left: 1rem;
+  ${applyMediaQuery("desktop")} {
+    margin-left: 1rem;
+  }
+  ${applyMediaQuery("tablet")} {
+    margin-left: 0.8rem;
+  }
   & > h3 {
     font-size: 1.1rem;
     color: #000000;
@@ -33,23 +42,54 @@ const StyledRoot = styled.div`
   & > h4 {
     font-size: 0.01rem;
     color: #737373;
-    margin-top: 0.2rem;
     letter-spacing: -12em;
+    ${applyMediaQuery("desktop")} {
+      margin-top: 0.2rem;
+    }
+    ${applyMediaQuery("tablet")} {
+    }
   }
   & > p {
     font-size: 1rem;
     color: #737373;
-    margin-top: 0.6rem;
+    ${applyMediaQuery("desktop")} {
+      margin-top: 0.6rem;
+    }
+    ${applyMediaQuery("tablet")} {
+      margin-top: 0.3rem;
+    }
+  }
+
+  ${applyMediaQuery("mobile")} {
+    align-items: center;
+    & > *:nth-child(1) {
+      margin-top: 1rem;
+    }
+    & > *:nth-child(2) {
+      margin-top: 0.3rem;
+    }
   }
 `;
 
 const StyledStarRating = styled.div`
   display: flex;
   align-items: end;
-  margin-top: 1.8rem;
+  ${applyMediaQuery("desktop")} {
+    margin-top: 1.8rem;
+  }
+  ${applyMediaQuery("tablet")} {
+    margin-top: 1.3rem;
+  }
+
   & > svg {
-    width: 1.2rem;
-    height: 1.2rem;
+    ${applyMediaQuery("desktop")} {
+      width: 1.2rem;
+      height: 1.2rem;
+    }
+    ${applyMediaQuery("tablet")} {
+      width: 1.03rem;
+      height: 1.03rem;
+    }
     fill: #e04537;
   }
   & > span {
