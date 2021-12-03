@@ -62,11 +62,68 @@
    ⎹  ⎿ 📁 images
    ⎿ 📁 components
    ⎹  ⎿ 📁 common 
+   ⎹  ⎹  ⎿ CommonNav.jsx
+   ⎹  ⎹  ⎿ Footer.jsx
+   ⎹  ⎹  ⎿ FooterBase.jsx
+   ⎹  ⎹  ⎿ MainHeader.jsx
+   ⎹  ⎹  ⎿ StyledLine.jsx
+   ⎹  ⎿ 📁 episode
+   ⎹  ⎹  ⎿ 📁 commentwrite
+   ⎹  ⎹  ⎹  ⎿ Comment.jsx
+   ⎹  ⎹  ⎹  ⎿ SideButton.jsx
+   ⎹  ⎹  ⎹  ⎿ StarScore.jsx
+   ⎹  ⎹  ⎹  ⎿ WriterComment.jsx
+   ⎹  ⎹  ⎿ CategoryTab.jsx
+   ⎹  ⎹  ⎿ Comment.jsx
+   ⎹  ⎹  ⎿ CommentsList.jsx
+   ⎹  ⎹  ⎿ CommentsListFooter.jsx
+   ⎹  ⎹  ⎿ CommentsListHeader.jsx
+   ⎹  ⎹  ⎿ CommentsListMain.jsx
+   ⎹  ⎹  ⎿ CommentsWriteMain.jsx
+   ⎹  ⎹  ⎿ EpisodeImg.jsx
+   ⎹  ⎹  ⎿ EpisodeSlider.jsx
+   ⎹  ⎹  ⎿ EpisodeSliderWrapper.jsx
+   ⎹  ⎹  ⎿ LocalNav.jsx
+   ⎹  ⎹  ⎿ TabItem.jsx
+   ⎹  ⎹  ⎿ View.jsx
+   ⎹  ⎹  ⎿ ViewHeader.jsx
+   ⎹  ⎹  ⎿ ViewMain.jsx
+   ⎹  ⎹  ⎿ WebtoonIntro.jsx
+   ⎹  ⎹  ⎿ WebtoonThumbnail.jsx
+   ⎹  ⎹  ⎿ WebtoonThumbnailBtn.jsx
+   ⎹  ⎹  ⎿ WeeklyTab.jsx
+   ⎹  ⎿ 📁 home
+   ⎹  ⎹  ⎿ 📁 genre
+   ⎹  ⎹  ⎹  ⎿ Button.jsx
+   ⎹  ⎹  ⎹  ⎿ Card.jsx
+   ⎹  ⎹  ⎹  ⎿ Tag.jsx
+   ⎹  ⎹  ⎹  ⎿ webtoonList.js
+   ⎹  ⎹  ⎿ BaseInfoWrapper.jsx
+   ⎹  ⎹  ⎿ CartoonInfo.jsx
+   ⎹  ⎹  ⎿ ChallengeWebtoonBase.jsx
+   ⎹  ⎹  ⎿ ChallengeWebtoonBox.jsx
+   ⎹  ⎹  ⎿ ChallengeWebtoonGroupHeader.jsx
+   ⎹  ⎹  ⎿ GenreWebtoon.jsx
+   ⎹  ⎹  ⎿ ImgSlider.jsx
+   ⎹  ⎹  ⎿ PopularityGenreCartoonBase.jsx
+   ⎹  ⎹  ⎿ PopularityGenreCartoonBox.jsx
+   ⎹  ⎹  ⎿ TodayWebtoon.jsx
+   ⎹  ⎹  ⎿ TodayWebtoonRight.jsx
+   ⎹  ⎹  ⎿ TodayWebtoonSection.jsx
+   ⎹  ⎹  ⎿ WebtoonInfo.jsx
    ⎿ 📁 libs
    ⎹  ⎿ 📁 constant
    ⎹  ⎮ ⎿ colors.js
    ⎹  ⎿ api.js
    ⎿ 📁 pages
+   ⎹  ⎿ Episode.js
+   ⎹  ⎿ Home.js
+   ⎿ 📁 routes
+   ⎹  ⎿ MainRouter.js
+   ⎿ 📁 styles
+   ⎹  ⎿ globalStyle.js
+   ⎹  ⎿ mediaQuery.js
+   ⎹  ⎿ Screen.jsx
    ⎿ APP.js
    ⎿ index.js
 ```
