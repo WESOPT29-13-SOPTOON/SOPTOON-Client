@@ -28,12 +28,17 @@ const Episode = () => {
   // const location = useLocation();
   // const id = location.state.id;
 
+  const addComment = (comment) => {
+    const temp = [comment, ...commentsInfo];
+    setCommentsInfo(temp);
+  };
+
   return (
     <div>
       <LocalNav />
       <WebtoonThumbnail />
       <View />
-      <CommentWriteMain />
+      <CommentWriteMain addComment={addComment} />
       <CommentsListHeader setView={setView} />
       <CommentsListMain view={view} id={id} commentsInfo={commentsInfo} bestCommentsInfo={bestCommentsInfo} />
       <CommentsListFooter />
