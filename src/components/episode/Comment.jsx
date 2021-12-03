@@ -4,14 +4,36 @@ import bestIcon from "../../assets/icons/ic_bestcomment.png";
 
 const Comment = ({ comment, view }) => {
   const { name, id, date, content } = comment;
-  const [number, setNumber] = useState(113);
+  const [likes, setLikes] = useState(113);
+  const [isLikeClicked, setIsLikeClicked] = useState(false);
+  const [isDislikeClicked, setIsDislikeClicked] = useState(false);
 
-  const increaseNumber = () => {
-    setNumber(number + 1);
+  const onLikeClick = () => {
+    if (isLikeClicked === false) {
+      // 좋아요 눌렸을 때
+      setIsLikeClicked(true);
+      setLikes(likes + 1);
+      setIsDislikeClicked(false);
+    } else {
+      setIsLikeClicked(false);
+      setLikes(likes - 1);
+    }
   };
 
-  // 좋아요 버튼 클릭했을 때 색변화
-  // 좋아요 버튼 클릭했을 때 숫자 올라가게
+  const onDislikeClick = () => {
+    if (isDislikeClicked === false) {
+      //싫어요 눌렸을 때
+      setIsDislikeClicked(true);
+      setIsLikeClicked(false);
+      if (isLikeClicked === true) {
+        //좋아요가 눌려져있으면 갯수 하나 빼주기
+        setLikes(likes - 1);
+      }
+    } else {
+      setIsDislikeClicked(false);
+    }
+  };
+  // 댓글 받았을 때 get해서 출력하고 전체댓글 보이게 하기
   return (
     <StyledRoot>
       <StyledWrapper>
@@ -26,8 +48,12 @@ const Comment = ({ comment, view }) => {
         <StyledFooter>
           <div>답글</div>
           <div>
-            <button onClick={increaseNumber}>좋아요 {number}</button>
-            <button>싫어요</button>
+            <StyledBtn onClick={onLikeClick} onClicked={isLikeClicked}>
+              좋아요 {likes}
+            </StyledBtn>
+            <StyledBtn onClick={onDislikeClick} onClicked={isDislikeClicked}>
+              싫어요
+            </StyledBtn>
           </div>
         </StyledFooter>
       </StyledWrapper>
@@ -100,7 +126,6 @@ const StyledFooter = styled.div`
     & > button {
       border-radius: 1.65rem;
       border: 0.1rem solid #e5e5e5;
-      background-color: white;
       margin-left: 1.6rem;
       font-weight: bold;
       color: #737373;
@@ -108,4 +133,8 @@ const StyledFooter = styled.div`
       height: 3.1rem;
     }
   }
+`;
+
+const StyledBtn = styled.button`
+  background-color: ${({ onClicked }) => (onClicked ? "#e5e5e5" : "white")};
 `;
