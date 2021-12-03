@@ -1,12 +1,16 @@
 import React from "react";
 import styled from "styled-components";
 import { applyMediaQuery } from "../styles/mediaQuery";
+import ChallengeWebtoonBox from "../components/home/ChallengeWebtoonBox";
+import PopularityGenreCartoonBox from "../components/home/PopularityGenreCartoonBox";
 import TodayWebtoon from "../components/home/TodayWebtoon";
 
 const Home = () => {
   return (
     <StyledRoot>
       <TodayWebtoon />
+      <ChallengeWebtoonBox />
+      <PopularityGenreCartoonBox />
     </StyledRoot>
   );
 };
