@@ -17,6 +17,7 @@ const StyledRoot = styled.div`
   margin: 0 auto;
   display: flex;
   align-items: center;
+  border-bottom: 1px solid #d2d2d2;
   p {
     font-size: 20px;
     font-weight: bold;
