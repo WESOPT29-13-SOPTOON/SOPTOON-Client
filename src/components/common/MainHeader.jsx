@@ -9,30 +9,43 @@ import downIcon from "../../assets/icons/ic_down_gray.svg";
 import searchIcon from "../../assets/icons/ic_search.svg";
 import line from "../../assets/icons/line.svg";
 import StyledLine from "./StyledLine";
+import Screen from "../../styles/Screen";
 
 const MainHeader = () => {
   return (
     <>
       <StyledRoot>
         <StyledLeft>
-          <img className="naver-logo-icon" src={naverLogoIcon} alt="logo" />
-          <p className="webtoon">만화</p>
-          <img className="line" src={line} alt="line" />
-          <p className="webnovel">웹소설</p>
-          <div className="input-box">
-            <input type="text" placeholder="제목/작가로 검색할 수 있습니다." />
-            <img className="search-icon" src={searchIcon} alt="search" />
-          </div>
+          <Screen desktop tablet>
+            <img className="naver-logo-icon" src={naverLogoIcon} alt="logo" />
+            <p className="webtoon">만화</p>
+            <img className="line" src={line} alt="line" />
+            <p className="webnovel">웹소설</p>
+            <div className="input-box">
+              <input type="text" placeholder="제목/작가로 검색할 수 있습니다." />
+              <img className="search-icon" src={searchIcon} alt="search" />
+            </div>
+          </Screen>
+          <Screen mobile>
+            <img className="naver-logo-icon" src={naverLogoIcon} alt="logo" />
+            <p className="webtoon">만화</p>
+          </Screen>
         </StyledLeft>
         <StyledRight>
-          <img className="profile-icon" src={profileIcon} alt="profile" />
-          <div className="profile">
-            <p>솝트</p>
-            <img src={downIcon} alt="down" />
-          </div>
-          <img className="notice-icon" src={noticeIcon} alt="notice" />
-          <img className="mail-icon" src={mailIcon} alt="mail" />
-          <img className="menu-icon" src={menuIcon} alt="menu" />
+          <Screen desktop tablet>
+            <img className="profile-icon" src={profileIcon} alt="profile" />
+            <div className="profile">
+              <p>솝트</p>
+              <img src={downIcon} alt="down" />
+            </div>
+            <img className="notice-icon" src={noticeIcon} alt="notice" />
+            <img className="mail-icon" src={mailIcon} alt="mail" />
+            <img className="menu-icon" src={menuIcon} alt="menu" />
+          </Screen>
+          <Screen mobile>
+            <img className="search-icon" src={searchIcon} alt="search" />
+            <img className="profile-icon" src={profileIcon} alt="profile" />
+          </Screen>
         </StyledRight>
       </StyledRoot>
       <StyledLine />
