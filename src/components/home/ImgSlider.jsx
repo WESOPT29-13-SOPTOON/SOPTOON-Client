@@ -6,6 +6,7 @@ import today3 from "../../assets/images/img_today3.png";
 import viewBtn from "../../assets/icons/ic_viewmore.svg";
 import circleBtn from "../../assets/icons/ic_circle.svg";
 import { applyMediaQuery } from "../../styles/mediaQuery";
+import Screen from "../../styles/Screen";
 
 const ImgSlader = () => {
   // 화살표 눌렀을 때 이미지 움직이기
@@ -15,17 +16,21 @@ const ImgSlader = () => {
     <StyledRoot>
       <div>11월 10일 수요일</div>
       <StyledSlader>
-        <button>
-          <img src={viewBtn} />
-        </button>
+        <Screen desktop>
+          <button>
+            <img src={viewBtn} />
+          </button>
+        </Screen>
         <StyledImg>
           <img src={today1} />
           <img src={today2} />
           <img src={today3} />
         </StyledImg>
-        <button>
-          <img src={viewBtn} />
-        </button>
+        <Screen desktop>
+          <button>
+            <img src={viewBtn} />
+          </button>
+        </Screen>
       </StyledSlader>
       <StyledBtn>
         <button>
@@ -87,6 +92,16 @@ const StyledImg = styled.div`
     width: 30.6rem;
     height: 16.8rem;
     border-radius: 0.6rem;
+  }
+
+  ${applyMediaQuery("desktop")} {
+    width: 49.717rem;
+  }
+  ${applyMediaQuery("tablet")} {
+    width: 26.103rem;
+  }
+  ${applyMediaQuery("mobile")} {
+    width: 20.233rem;
   }
 `;
 
