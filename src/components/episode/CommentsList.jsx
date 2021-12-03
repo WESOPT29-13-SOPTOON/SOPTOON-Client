@@ -9,7 +9,7 @@ const CommentsList = ({ commentsData, view }) => {
     <StyledRoot>
       <StyledWrapper>
         {commentsData.map((comment, i) => (
-          <Comment view={view} comment={comment} key={`comment-${i}`} />
+          <Comment view={view} data={comment} key={`comment-${i}`} />
         ))}
       </StyledWrapper>
     </StyledRoot>
