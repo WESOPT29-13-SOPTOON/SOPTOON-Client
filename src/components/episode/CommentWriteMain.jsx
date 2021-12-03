@@ -7,7 +7,7 @@ import { postComment } from "../../libs/api";
 const CommentWriteMain = ({ writer = "이동건", webtoonId = 1, email = "abc@mail.com" }) => {
   const handleSubmit = async (e, input) => {
     e.preventDefault();
-    const data = await postComment({ webtoonId, email, input });
+    const data = await postComment({ webtoonId: webtoonId, email: email, comment: input });
     console.log(data);
   };
 
