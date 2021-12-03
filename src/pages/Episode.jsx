@@ -7,6 +7,7 @@ import CommentsListMain from "../components/episode/CommentsListMain";
 import CommentsListFooter from "../components/episode/CommentsListFooter";
 import CommentWriteMain from "../components/episode/CommentWriteMain";
 import View from "../components/episode/View";
+import LocalNav from "../components/episode/LocalNav";
 
 const Episode = () => {
   const [view, setView] = useState("");
@@ -16,6 +17,7 @@ const Episode = () => {
 
   return (
     <div>
+      <LocalNav />
       <WebtoonThumbnail />
       <View />
       <CommentWriteMain />
