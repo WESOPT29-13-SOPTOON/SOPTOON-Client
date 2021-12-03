@@ -4,35 +4,67 @@ import bestIcon from "../../assets/icons/ic_bestcomment.png";
 
 const Comment = ({ comment, view }) => {
   const { name, id, date, content } = comment;
-  const [likes, setLikes] = useState(113);
-  const [isLikeClicked, setIsLikeClicked] = useState(false);
-  const [isDislikeClicked, setIsDislikeClicked] = useState(false);
 
-  const onLikeClick = () => {
-    if (isLikeClicked === false) {
+  const [Commentlikes, setCommentLikes] = useState(113);
+  const [isCommentLikeClicked, setIsCommentLikeClicked] = useState(false);
+  const [isCommentDislikeClicked, setIsCommentDislikeClicked] = useState(false);
+
+  const onCommentLikeClick = () => {
+    if (isCommentLikeClicked === false) {
       // 좋아요 눌렸을 때
-      setIsLikeClicked(true);
-      setLikes(likes + 1);
-      setIsDislikeClicked(false);
+      setIsCommentLikeClicked(true);
+      setCommentLikes(Commentlikes + 1);
+      setIsCommentDislikeClicked(false);
     } else {
-      setIsLikeClicked(false);
-      setLikes(likes - 1);
+      setIsCommentLikeClicked(false);
+      setCommentLikes(Commentlikes - 1);
     }
   };
 
-  const onDislikeClick = () => {
-    if (isDislikeClicked === false) {
+  const onCommentDislikeClick = () => {
+    if (isCommentDislikeClicked === false) {
       //싫어요 눌렸을 때
-      setIsDislikeClicked(true);
-      setIsLikeClicked(false);
-      if (isLikeClicked === true) {
+      setIsCommentDislikeClicked(true);
+      setIsCommentLikeClicked(false);
+      if (isCommentLikeClicked === true) {
         //좋아요가 눌려져있으면 갯수 하나 빼주기
-        setLikes(likes - 1);
+        setCommentLikes(Commentlikes - 1);
       }
     } else {
-      setIsDislikeClicked(false);
+      setIsCommentDislikeClicked(false);
     }
   };
+
+  const [BestCommentlikes, setBestCommentLikes] = useState(421);
+  const [isBestCommentLikeClicked, setIsBestCommentLikeClicked] = useState(false);
+  const [isBestCommentDislikeClicked, setIsBestCommentDislikeClicked] = useState(false);
+
+  const onBestCommentLikeClick = () => {
+    if (isBestCommentLikeClicked === false) {
+      // 좋아요 눌렸을 때
+      setIsBestCommentLikeClicked(true);
+      setBestCommentLikes(BestCommentlikes + 1);
+      setIsBestCommentDislikeClicked(false);
+    } else {
+      setIsBestCommentLikeClicked(false);
+      setBestCommentLikes(BestCommentlikes - 1);
+    }
+  };
+
+  const onBestCommentDislikeClick = () => {
+    if (isBestCommentDislikeClicked === false) {
+      //싫어요 눌렸을 때
+      setIsBestCommentDislikeClicked(true);
+      setIsBestCommentLikeClicked(false);
+      if (isBestCommentLikeClicked === true) {
+        //좋아요가 눌려져있으면 갯수 하나 빼주기
+        setBestCommentLikes(BestCommentlikes - 1);
+      }
+    } else {
+      setIsBestCommentDislikeClicked(false);
+    }
+  };
+
   // 댓글 받았을 때 get해서 출력하고 전체댓글 보이게 하기
   return (
     <StyledRoot>
@@ -48,10 +80,14 @@ const Comment = ({ comment, view }) => {
         <StyledFooter>
           <div>답글</div>
           <div>
-            <StyledBtn onClick={onLikeClick} onClicked={isLikeClicked}>
-              좋아요 {likes}
+            <StyledBtn
+              onClick={view === "comment" ? onCommentLikeClick : onBestCommentLikeClick}
+              onClicked={view === "comment" ? isCommentLikeClicked : isBestCommentLikeClicked}>
+              좋아요 {view === "comment" ? Commentlikes : BestCommentlikes}
             </StyledBtn>
-            <StyledBtn onClick={onDislikeClick} onClicked={isDislikeClicked}>
+            <StyledBtn
+              onClick={view === "comment" ? onCommentDislikeClick : onBestCommentDislikeClick}
+              onClicked={view === "comment" ? isCommentDislikeClicked : isBestCommentDislikeClicked}>
               싫어요
             </StyledBtn>
           </div>
